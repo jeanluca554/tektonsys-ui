@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-input-group",
+  "title": "Input Group example",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "input-group"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/input-group-demo.tsx",
+      "content": "import { Mail } from \"lucide-react\";\nimport { InputGroup } from \"~/client/components/ui/input-group\";\n\nexport default function InputGroupDemo() {\n  return (\n    <div className=\"flex max-w-sm flex-col gap-4\">\n      <InputGroup.Root>\n        <InputGroup.Side side=\"start\">https://</InputGroup.Side>\n        <InputGroup.Input placeholder=\"seusite.com.br\" />\n      </InputGroup.Root>\n      <InputGroup.Root>\n        <InputGroup.Addon align=\"inline-start\">\n          <Mail size={16} />\n        </InputGroup.Addon>\n        <InputGroup.Input className=\"pl-9\" placeholder=\"voce@empresa.com\" />\n      </InputGroup.Root>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

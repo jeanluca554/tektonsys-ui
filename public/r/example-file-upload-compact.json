@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-file-upload-compact",
+  "title": "File Upload Compact example",
+  "registryDependencies": [
+    "file-upload-compact"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/file-upload-compact-demo.tsx",
+      "content": "import { FileUploadCompact } from \"~/client/components/ui/file-upload-compact\";\n\nexport default function FileUploadCompactDemo() {\n  return (\n    <div className=\"flex flex-col gap-2\">\n      <FileUploadCompact\n        name=\"document-demo\"\n        description=\"PDF, DOC ou XLS até 10MB.\"\n        defaultValue=\"https://example.com/contrato-assinado.pdf\"\n      />\n      <p className=\"text-xs text-muted-foreground\">\n        Escolher um novo arquivo exige um endpoint <code>/api/file-upload</code> no projeto\n        consumidor — o preview acima mostra apenas o estado \"já enviado\".\n      </p>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

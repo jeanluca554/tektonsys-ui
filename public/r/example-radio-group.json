@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-radio-group",
+  "title": "Radio Group example",
+  "registryDependencies": [
+    "radio-group",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/radio-group-demo.tsx",
+      "content": "import { Label } from \"~/client/components/ui/label\";\nimport { RadioGroup } from \"~/client/components/ui/radio-group\";\n\nexport default function RadioGroupDemo() {\n  return (\n    <RadioGroup.Root defaultValue=\"monthly\">\n      <div className=\"flex items-center gap-2\">\n        <RadioGroup.Item value=\"monthly\" id=\"monthly-demo\" />\n        <Label htmlFor=\"monthly-demo\">Mensal</Label>\n      </div>\n      <div className=\"flex items-center gap-2\">\n        <RadioGroup.Item value=\"yearly\" id=\"yearly-demo\" />\n        <Label htmlFor=\"yearly-demo\">Anual</Label>\n      </div>\n    </RadioGroup.Root>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

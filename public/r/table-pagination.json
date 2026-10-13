@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-pagination",
+  "title": "Table Pagination",
+  "dependencies": [
+    "react-router"
+  ],
+  "registryDependencies": [
+    "pagination"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/ui/table-pagination.tsx",
+      "content": "import { useLocation } from \"react-router\";\nimport { Pagination } from \"./pagination\";\n\ntype TablePaginationProps = {\n  currentPage: number;\n  totalPages: number;\n  pageParam?: string;\n  buildPageUrl?: (page: number) => string;\n};\n\nfunction buildVisibleRange(current: number, total: number): number[] {\n  const delta = 2;\n  const start = Math.max(1, current - delta);\n  const end = Math.min(total, current + delta);\n  return Array.from({ length: end - start + 1 }, (_, i) => start + i);\n}\n\nfunction TablePagination({\n  currentPage,\n  totalPages,\n  pageParam = \"page\",\n  buildPageUrl,\n}: TablePaginationProps) {\n  const location = useLocation();\n\n  function defaultPageUrl(page: number) {\n    const params = new URLSearchParams(location.search);\n    params.set(pageParam, String(page));\n    return `${location.pathname}?${params.toString()}`;\n  }\n\n  const toUrl = buildPageUrl ?? defaultPageUrl;\n  const visiblePages = buildVisibleRange(currentPage, totalPages);\n  const showLeadingEllipsis = visiblePages[0] > 2;\n  const showTrailingEllipsis = visiblePages[visiblePages.length - 1] < totalPages - 1;\n\n  return (\n    <>\n      <p className=\"text-sm text-(--text-muted)\">\n        Exibindo {currentPage} de {totalPages} páginas\n      </p>\n      <Pagination.Root>\n        <Pagination.Content>\n          <Pagination.Item>\n            <Pagination.Previous\n              to={currentPage > 1 ? toUrl(currentPage - 1) : undefined}\n              disabled={currentPage === 1}\n            />\n          </Pagination.Item>\n\n          {visiblePages[0] > 1 && (\n            <Pagination.Item>\n              <Pagination.Link to={toUrl(1)} isActive={currentPage === 1}>\n                1\n              </Pagination.Link>\n            </Pagination.Item>\n          )}\n\n          {showLeadingEllipsis && (\n            <Pagination.Item>\n              <Pagination.Ellipsis />\n            </Pagination.Item>\n          )}\n\n          {visiblePages.map((page) => (\n            <Pagination.Item key={page}>\n              <Pagination.Link to={toUrl(page)} isActive={page === currentPage}>\n                {page}\n              </Pagination.Link>\n            </Pagination.Item>\n          ))}\n\n          {showTrailingEllipsis && (\n            <Pagination.Item>\n              <Pagination.Ellipsis />\n            </Pagination.Item>\n          )}\n\n          {visiblePages[visiblePages.length - 1] < totalPages && (\n            <Pagination.Item>\n              <Pagination.Link\n                to={toUrl(totalPages)}\n                isActive={currentPage === totalPages}\n              >\n                {totalPages}\n              </Pagination.Link>\n            </Pagination.Item>\n          )}\n\n          <Pagination.Item>\n            <Pagination.Next\n              to={currentPage < totalPages ? toUrl(currentPage + 1) : undefined}\n              disabled={currentPage === totalPages}\n            />\n          </Pagination.Item>\n        </Pagination.Content>\n      </Pagination.Root>\n    </>\n  );\n}\n\nexport { TablePagination };\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

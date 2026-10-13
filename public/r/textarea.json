@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea",
+  "title": "Textarea",
+  "registryDependencies": [
+    "form-field",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/ui/textarea.tsx",
+      "content": "import { use, type ComponentProps } from \"react\";\nimport { cn } from \"~/lib/utils\";\nimport { FormErrorContext, FormFieldContext } from \"./form-field\";\n\nfunction Textarea({ className, ...props }: ComponentProps<\"textarea\">) {\n  const name = use(FormFieldContext);\n  const fieldErrors = use(FormErrorContext);\n  const hasError = !!fieldErrors[name]?.length;\n\n  return (\n    <textarea\n      data-slot=\"textarea\"\n      aria-invalid={hasError || undefined}\n      className={cn(\n        \"w-full min-h-16 rounded-md border border-border bg-muted px-3 py-2 text-sm\",\n        \"text-foreground placeholder:text-muted-foreground\",\n        \"outline-none ring-offset-background\",\n        \"focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1\",\n        \"group-data-invalid:border-destructive group-data-invalid:focus-visible:ring-destructive\",\n        \"disabled:cursor-not-allowed disabled:opacity-50\",\n        \"resize-none\",\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n\nexport { Textarea };\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

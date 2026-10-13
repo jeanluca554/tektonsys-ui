@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table",
+  "title": "Table",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "empty",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/ui/table.tsx",
+      "content": "import { Inbox } from \"lucide-react\";\nimport type { ComponentProps, ReactNode } from \"react\";\nimport { Empty as EmptyComponent } from \"./empty\";\nimport { cn } from \"~/lib/utils\";\n\nfunction Root({ className, ...props }: ComponentProps<\"table\">) {\n  return (\n    <div className=\"relative min-w-0 w-full overflow-x-auto rounded-(--radius)\">\n      <table\n        className={cn(\n          \"w-full border-separate border-spacing-0 text-sm\",\n          className,\n        )}\n        {...props}\n      />\n    </div>\n  );\n}\n\nfunction Header({ className, ...props }: ComponentProps<\"thead\">) {\n  return <thead className={cn(\"bg-secondary\", className)} {...props} />;\n}\n\nfunction Body({ className, ...props }: ComponentProps<\"tbody\">) {\n  return (\n    <tbody\n      className={cn(\n        \"before:content-[''] before:table-row before:h-3\",\n        \"[&>tr]:h-16 [&>tr:nth-child(odd)]:bg-muted\",\n        \"[&>tr:nth-child(n):hover]:bg-secondary\",\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n\nfunction Row({ className, ...props }: ComponentProps<\"tr\">) {\n  return <tr className={cn(\"transition-colors\", className)} {...props} />;\n}\n\nfunction Head({ className, ...props }: ComponentProps<\"th\">) {\n  return (\n    <th\n      className={cn(\n        \"h-11 px-4 text-left align-middle font-semibold text-sm text-muted-foreground whitespace-nowrap first:rounded-l-(--radius) last:rounded-r-(--radius)\",\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n\nfunction Cell({ className, ...props }: ComponentProps<\"td\">) {\n  return (\n    <td\n      className={cn(\n        \"px-4 align-middle text-sm text-foreground whitespace-nowrap first:rounded-l-(--radius) last:rounded-r-(--radius)\",\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n\ntype TableEmptyProps = {\n  title?: string;\n  description?: string;\n  icon?: ReactNode;\n  className?: string;\n};\n\nfunction Empty({\n  title = \"Nenhum registro encontrado.\",\n  description,\n  icon = <Inbox />,\n  className,\n}: TableEmptyProps) {\n  return (\n    <Row>\n      <Cell colSpan={9999}>\n        <EmptyComponent.Root className={cn(\"border-0 py-12\", className)}>\n          <EmptyComponent.Media variant=\"icon\">{icon}</EmptyComponent.Media>\n          <EmptyComponent.Header>\n            <EmptyComponent.Title>{title}</EmptyComponent.Title>\n            {description && (\n              <EmptyComponent.Description>{description}</EmptyComponent.Description>\n            )}\n          </EmptyComponent.Header>\n        </EmptyComponent.Root>\n      </Cell>\n    </Row>\n  );\n}\n\nexport const Table = { Root, Header, Body, Row, Head, Cell, Empty };\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

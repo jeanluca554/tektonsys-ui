@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-empty",
+  "title": "Empty example",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "empty"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/empty-demo.tsx",
+      "content": "import { Inbox } from \"lucide-react\";\nimport { Empty } from \"~/client/components/ui/empty\";\n\nexport default function EmptyDemo() {\n  return (\n    <Empty.Root>\n      <Empty.Header>\n        <Empty.Media variant=\"icon\">\n          <Inbox />\n        </Empty.Media>\n        <Empty.Title>Nenhum registro encontrado</Empty.Title>\n        <Empty.Description>Ajuste os filtros ou crie um novo item.</Empty.Description>\n      </Empty.Header>\n    </Empty.Root>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

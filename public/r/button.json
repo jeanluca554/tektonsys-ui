@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button",
+  "title": "Button",
+  "dependencies": [
+    "@radix-ui/react-slot",
+    "tailwind-variants"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/ui/button.tsx",
+      "content": "import { Slot } from \"@radix-ui/react-slot\";\nimport { tv, type VariantProps } from \"tailwind-variants\";\nimport type { ComponentProps } from \"react\";\n\nconst button = tv({\n  base: [\n    \"inline-flex items-center justify-center gap-2\",\n    \"font-semibold text-sm\",\n    \"transition-[filter] duration-150\",\n    \"disabled:opacity-50 disabled:cursor-not-allowed\",\n    \"cursor-pointer\",\n  ],\n  variants: {\n    variant: {\n      default: \"bg-primary text-primary-foreground hover:brightness-95\",\n      secondary: \"bg-secondary text-primary hover:brightness-95\",\n      outline:\n        \"border border-border bg-transparent text-primary hover:brightness-95\",\n      ghost: \"bg-transparent text-primary hover:brightness-95\",\n      danger: \"bg-destructive text-destructive-foreground hover:brightness-95\",\n    },\n    size: {\n      default: \"rounded-xl h-11 px-4 py-2\",\n      sm: \"h-9 rounded-xl px-3\",\n      lg: \"h-13 rounded-xl px-8\",\n      icon: \"size-11 rounded-xl p-0\",\n    },\n  },\n  defaultVariants: {\n    variant: \"default\",\n    size: \"default\",\n  },\n});\n\nexport type ButtonVariants = VariantProps<typeof button>;\n\ntype ButtonProps = ComponentProps<\"button\"> &\n  ButtonVariants & {\n    asChild?: boolean;\n    isLoading?: boolean;\n  };\n\nexport function Button({\n  className,\n  variant,\n  size,\n  asChild = false,\n  isLoading = false,\n  disabled,\n  children,\n  ...props\n}: ButtonProps) {\n  const Comp = asChild ? Slot : \"button\";\n  return (\n    <Comp\n      disabled={isLoading || disabled}\n      className={button({ variant, size, className })}\n      {...props}\n    >\n      {isLoading ? \"Carregando...\" : children}\n    </Comp>\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

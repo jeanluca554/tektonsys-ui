@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-field",
+  "title": "Switch Field",
+  "registryDependencies": [
+    "label",
+    "switch",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/ui/switch-field.tsx",
+      "content": "import { Label } from \"~/client/components/ui/label\";\nimport { Switch } from \"~/client/components/ui/switch\";\nimport { cn } from \"~/lib/utils\";\n\ntype SwitchFieldProps = {\n  name: string;\n  label: string;\n  checked: boolean;\n  onChange: (value: boolean) => void;\n  disabled?: boolean;\n};\n\nfunction SwitchField({ name, label, checked, onChange, disabled }: SwitchFieldProps) {\n  return (\n    <div className={cn(\"flex items-center gap-4\", disabled && \"opacity-50\")}>\n      <input type=\"hidden\" name={name} value={checked ? \"true\" : \"false\"} />\n      <Label\n        className={cn(\"cursor-pointer\", disabled && \"cursor-not-allowed\")}\n        onClick={() => !disabled && onChange(!checked)}\n      >\n        {label}\n      </Label>\n      <Switch checked={checked} onCheckedChange={onChange} disabled={disabled} />\n    </div>\n  );\n}\n\nexport { SwitchField };\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

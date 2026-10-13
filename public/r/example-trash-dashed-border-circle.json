@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-trash-dashed-border-circle",
+  "title": "Trash Dashed Border Circle example",
+  "registryDependencies": [
+    "trash-dashed-border-circle"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/trash-dashed-border-circle-demo.tsx",
+      "content": "import { TrashDashedBorderCircle } from \"~/client/components/ui/trash-dashed-border-circle\";\n\nexport default function TrashDashedBorderCircleDemo() {\n  return <TrashDashedBorderCircle />;\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

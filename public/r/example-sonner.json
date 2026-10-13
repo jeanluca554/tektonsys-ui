@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-sonner",
+  "title": "Sonner example",
+  "registryDependencies": [
+    "sonner",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/sonner-demo.tsx",
+      "content": "import { toast } from \"sonner\";\nimport { Button } from \"~/client/components/ui/button\";\n\nexport default function SonnerDemo() {\n  return (\n    <Button variant=\"outline\" onClick={() => toast.success(\"Alteração salva com sucesso.\")}>\n      Disparar toast\n    </Button>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

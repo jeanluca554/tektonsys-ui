@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-popover",
+  "title": "Popover example",
+  "registryDependencies": [
+    "popover",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/popover-demo.tsx",
+      "content": "import { Button } from \"~/client/components/ui/button\";\nimport { Popover, PopoverContent, PopoverTrigger } from \"~/client/components/ui/popover\";\n\nexport default function PopoverDemo() {\n  return (\n    <Popover>\n      <PopoverTrigger asChild>\n        <Button variant=\"outline\">Abrir popover</Button>\n      </PopoverTrigger>\n      <PopoverContent>\n        <p className=\"text-sm\">Conteúdo flutuante exibido ao lado do gatilho.</p>\n      </PopoverContent>\n    </Popover>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

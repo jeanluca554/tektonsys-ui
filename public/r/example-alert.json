@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-alert",
+  "title": "Alert example",
+  "registryDependencies": [
+    "alert"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/alert-demo.tsx",
+      "content": "import { Alert } from \"~/client/components/ui/alert\";\n\nexport default function AlertDemo() {\n  return (\n    <div className=\"flex flex-col gap-4\">\n      <Alert.Root variant=\"default\">\n        <Alert.Title>Atualização disponível</Alert.Title>\n        <Alert.Description>Uma nova versão do app já pode ser instalada.</Alert.Description>\n      </Alert.Root>\n      <Alert.Root variant=\"warning\">\n        <Alert.Title>Atenção</Alert.Title>\n        <Alert.Description>Revise os dados antes de continuar.</Alert.Description>\n      </Alert.Root>\n      <Alert.Root variant=\"destructive\">\n        <Alert.Title>Erro ao salvar</Alert.Title>\n        <Alert.Description>Não foi possível concluir a operação.</Alert.Description>\n      </Alert.Root>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

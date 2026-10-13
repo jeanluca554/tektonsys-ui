@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-whatsapp-icon",
+  "title": "WhatsApp Icon example",
+  "registryDependencies": [
+    "whatsapp-icon"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/whatsapp-icon-demo.tsx",
+      "content": "import { WhatsAppIcon } from \"~/client/components/ui/whatsapp-icon\";\n\nexport default function WhatsAppIconDemo() {\n  return <WhatsAppIcon size={32} className=\"text-[#25D366]\" />;\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

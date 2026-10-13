@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-phone-input",
+  "title": "Phone Input example",
+  "registryDependencies": [
+    "phone-input"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/phone-input-demo.tsx",
+      "content": "import { useState } from \"react\";\nimport { PhoneInput } from \"~/client/components/ui/phone-input\";\n\nexport default function PhoneInputDemo() {\n  const [value, setValue] = useState<string>();\n  return (\n    <PhoneInput\n      defaultCountry=\"BR\"\n      value={value}\n      onChange={(v) => setValue(v)}\n      className=\"max-w-xs\"\n    />\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

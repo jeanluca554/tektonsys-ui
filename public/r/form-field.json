@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "form-field",
+  "title": "Form Field",
+  "registryDependencies": [
+    "label",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/ui/form-field.tsx",
+      "content": "import * as React from \"react\";\n\nimport { cn } from \"~/lib/utils\";\nimport { Label } from \"./label\";\n\ntype FieldErrors = Record<string, string[] | undefined>;\n\nconst FormErrorContext = React.createContext<FieldErrors>({});\nconst FormFieldContext = React.createContext<string>(\"\");\n\nfunction FormErrorProvider({\n  fieldErrors,\n  children,\n}: {\n  fieldErrors?: FieldErrors | null;\n  children: React.ReactNode;\n}) {\n  return (\n    <FormErrorContext value={fieldErrors ?? {}}>{children}</FormErrorContext>\n  );\n}\n\ntype FormFieldProps = {\n  name: string;\n  label: string;\n  required?: boolean;\n  optional?: boolean;\n  className?: string;\n  children: React.ReactNode;\n};\n\nfunction FormField({\n  name,\n  label,\n  required = false,\n  optional = false,\n  className,\n  children,\n}: FormFieldProps) {\n  const fieldErrors = React.use(FormErrorContext);\n  const error = fieldErrors[name];\n  const hasError = !!error?.length;\n\n  return (\n    <FormFieldContext value={name}>\n      <div\n        data-invalid={hasError ? \"\" : undefined}\n        className={cn(\"group flex flex-col gap-1.5\", className)}\n      >\n        <Label htmlFor={name} className=\"inline-flex items-baseline gap-1.5\">\n          {required && <span className=\"text-destructive\">*</span>}\n          {label}\n          {optional && <span className=\"text-xs font-normal text-muted-foreground\">(opcional)</span>}\n        </Label>\n\n        {children}\n\n        {hasError && (\n          <p className=\"text-xs font-medium text-destructive\">{error}</p>\n        )}\n      </div>\n    </FormFieldContext>\n  );\n}\n\nexport { FormErrorProvider, FormField, FormErrorContext, FormFieldContext };\nexport type { FieldErrors };\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

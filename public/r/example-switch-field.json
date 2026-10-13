@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-switch-field",
+  "title": "Switch Field example",
+  "registryDependencies": [
+    "switch-field"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/switch-field-demo.tsx",
+      "content": "import { useState } from \"react\";\nimport { SwitchField } from \"~/client/components/ui/switch-field\";\n\nexport default function SwitchFieldDemo() {\n  const [checked, setChecked] = useState(true);\n  return (\n    <SwitchField\n      name=\"notifications-demo\"\n      label=\"Receber notificações\"\n      checked={checked}\n      onChange={setChecked}\n    />\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

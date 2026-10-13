@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-avatar",
+  "title": "Avatar example",
+  "registryDependencies": [
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/avatar-demo.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarGroup, AvatarImage } from \"~/client/components/ui/avatar\";\n\nexport default function AvatarDemo() {\n  return (\n    <div className=\"flex items-center gap-6\">\n      <Avatar size=\"sm\">\n        <AvatarFallback>JD</AvatarFallback>\n      </Avatar>\n      <Avatar>\n        <AvatarImage src=\"https://github.com/shadcn.png\" alt=\"Avatar\" />\n        <AvatarFallback>CN</AvatarFallback>\n      </Avatar>\n      <Avatar size=\"lg\">\n        <AvatarFallback>LG</AvatarFallback>\n      </Avatar>\n      <AvatarGroup>\n        <Avatar>\n          <AvatarFallback>A</AvatarFallback>\n        </Avatar>\n        <Avatar>\n          <AvatarFallback>B</AvatarFallback>\n        </Avatar>\n        <Avatar>\n          <AvatarFallback>C</AvatarFallback>\n        </Avatar>\n      </AvatarGroup>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

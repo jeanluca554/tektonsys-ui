@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-toggle-group",
+  "title": "Toggle Group example",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "toggle-group"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/toggle-group-demo.tsx",
+      "content": "import { Bold, Italic, Underline } from \"lucide-react\";\nimport { useState } from \"react\";\nimport { ToggleGroup } from \"~/client/components/ui/toggle-group\";\n\nexport default function ToggleGroupDemo() {\n  const [value, setValue] = useState(\"bold\");\n  return (\n    <ToggleGroup.Root type=\"single\" value={value} onValueChange={setValue}>\n      <ToggleGroup.Item value=\"bold\" variant=\"icon\">\n        <Bold size={16} />\n      </ToggleGroup.Item>\n      <ToggleGroup.Item value=\"italic\" variant=\"icon\">\n        <Italic size={16} />\n      </ToggleGroup.Item>\n      <ToggleGroup.Item value=\"underline\" variant=\"icon\">\n        <Underline size={16} />\n      </ToggleGroup.Item>\n    </ToggleGroup.Root>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-input",
+  "title": "Input example",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "input"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/input-demo.tsx",
+      "content": "import { Search } from \"lucide-react\";\nimport { Input } from \"~/client/components/ui/input\";\n\nexport default function InputDemo() {\n  return (\n    <div className=\"flex max-w-sm flex-col gap-4\">\n      <Input placeholder=\"Nome completo\" />\n      <Input leftIcon={Search} placeholder=\"Buscar...\" />\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

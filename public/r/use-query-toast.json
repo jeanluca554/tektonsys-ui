@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "use-query-toast",
+  "title": "useQueryToast",
+  "description": "Shows a sonner toast driven by a URL query param, then strips the param from the URL.",
+  "dependencies": [
+    "react-router",
+    "sonner"
+  ],
+  "registryDependencies": [
+    "scoped-params"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/hooks/useQueryToast.ts",
+      "content": "import { useEffect, useRef } from \"react\";\nimport { useLocation, useNavigate } from \"react-router\";\nimport { toast } from \"sonner\";\nimport { useScopedParams } from \"~/lib/scopedParams\";\n\ntype UseQueryToastOptions = {\n  param: string;\n  value?: string; // opcional (default: \"true\")\n  message: string;\n  type?: \"success\" | \"danger\";\n};\n\nfunction useQueryToast({\n  param,\n  value = \"true\",\n  message,\n  type = \"success\",\n}: UseQueryToastOptions) {\n  const location = useLocation();\n  const navigate = useNavigate();\n\n  const scopedParams = useScopedParams(location.search);\n  const paramValue = scopedParams.getParam(param);\n\n  const hasShown = useRef(false);\n\n  useEffect(() => {\n    if (paramValue === value && !hasShown.current) {\n      hasShown.current = true;\n\n      if (type === \"danger\") {\n        toast.error(message);\n      } else {\n        toast.success(message);\n      }\n\n      const params = new URLSearchParams(location.search);\n      params.delete(param);\n\n      navigate(\n        {\n          pathname: location.pathname,\n          search: params.toString(),\n        },\n        { replace: true },\n      );\n    }\n  }, [paramValue, value, message, type, location, navigate]);\n}\n\nexport { useQueryToast };\n",
+      "type": "registry:hook"
+    }
+  ],
+  "type": "registry:hook"
+}

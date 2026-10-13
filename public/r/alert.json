@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert",
+  "title": "Alert",
+  "dependencies": [
+    "tailwind-variants"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/ui/alert.tsx",
+      "content": "import { createContext, use } from \"react\";\nimport { tv, type VariantProps } from \"tailwind-variants\";\nimport type { ComponentProps } from \"react\";\n\nconst alert = tv({\n  slots: {\n    root: \"grid grid-cols-[min-content_1fr] gap-x-3 gap-y-1 p-4 rounded-lg border w-full\",\n    icon: \"row-span-2 shrink-0 mt-0.5\",\n    title: \"col-start-2 font-semibold text-sm leading-none\",\n    description: \"col-start-2 text-sm leading-relaxed\",\n  },\n  variants: {\n    variant: {\n      default: {\n        root: \"bg-background text-foreground border-border\",\n        icon: \"text-foreground\",\n      },\n      warning: {\n        root: \"border-orange-300 bg-orange-50 dark:border-orange-700 dark:bg-orange-950/40\",\n        icon: \"text-orange-500 dark:text-orange-400\",\n        title: \"text-orange-900 dark:text-orange-100\",\n        description: \"text-orange-800 dark:text-orange-200\",\n      },\n      destructive: {\n        root: \"border-destructive/30 bg-destructive/10\",\n        icon: \"text-destructive\",\n        title: \"text-destructive\",\n        description: \"text-destructive/80\",\n      },\n    },\n  },\n  defaultVariants: {\n    variant: \"default\",\n  },\n});\n\ntype AlertVariants = VariantProps<typeof alert>;\n\nconst AlertContext = createContext<AlertVariants[\"variant\"]>(\"default\");\n\ntype AlertRootProps = ComponentProps<\"div\"> & AlertVariants;\nfunction Root({ variant = \"default\", className, children, ...props }: AlertRootProps) {\n  const { root } = alert({ variant });\n  return (\n    <AlertContext.Provider value={variant}>\n      <div role=\"alert\" className={root({ className })} {...props}>\n        {children}\n      </div>\n    </AlertContext.Provider>\n  );\n}\n\nfunction Icon({ className, children, ...props }: ComponentProps<\"span\">) {\n  const variant = use(AlertContext);\n  const { icon } = alert({ variant });\n  return (\n    <span className={icon({ className })} {...props}>\n      {children}\n    </span>\n  );\n}\n\nfunction Title({ className, ...props }: ComponentProps<\"p\">) {\n  const variant = use(AlertContext);\n  const { title } = alert({ variant });\n  return <p className={title({ className })} {...props} />;\n}\n\nfunction Description({ className, ...props }: ComponentProps<\"p\">) {\n  const variant = use(AlertContext);\n  const { description } = alert({ variant });\n  return <p className={description({ className })} {...props} />;\n}\n\nexport const Alert = { Root, Icon, Title, Description };\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

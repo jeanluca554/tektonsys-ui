@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "use-theme",
+  "title": "useTheme",
+  "description": "Light/dark theme context provider and hook.",
+  "files": [
+    {
+      "path": "registry/new-york/hooks/useTheme.tsx",
+      "content": "import { createContext, useCallback, useContext, useEffect, useState } from \"react\";\nimport type { ReactNode } from \"react\";\n\ntype Theme = \"light\" | \"dark\";\n\ntype ThemeContextType = {\n  theme: Theme;\n  toggle: () => void;\n};\n\nconst ThemeContext = createContext<ThemeContextType | null>(null);\n\nfunction ThemeProvider({ children }: { children: ReactNode }) {\n  const [theme, setTheme] = useState<Theme>(\"light\");\n\n  useEffect(() => {\n    const stored = localStorage.getItem(\"theme\") as Theme | null;\n    if (stored) setTheme(stored);\n  }, []);\n\n  useEffect(() => {\n    document.documentElement.classList.toggle(\"dark\", theme === \"dark\");\n    localStorage.setItem(\"theme\", theme);\n  }, [theme]);\n\n  const toggle = useCallback(() => {\n    setTheme((prev) => (prev === \"light\" ? \"dark\" : \"light\"));\n  }, []);\n\n  return (\n    <ThemeContext.Provider value={{ theme, toggle }}>\n      {children}\n    </ThemeContext.Provider>\n  );\n}\n\nfunction useTheme() {\n  const ctx = useContext(ThemeContext);\n  if (!ctx) throw new Error(\"useTheme must be used within a ThemeProvider\");\n  return ctx;\n}\n\nexport { ThemeProvider, useTheme };\n",
+      "type": "registry:hook"
+    }
+  ],
+  "type": "registry:hook"
+}

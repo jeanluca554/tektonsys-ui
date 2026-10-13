@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input",
+  "title": "Input",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "form-field",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/ui/input.tsx",
+      "content": "import * as React from \"react\";\nimport type { LucideIcon } from \"lucide-react\";\n\nimport { cn } from \"~/lib/utils\";\nimport { FormErrorContext, FormFieldContext } from \"./form-field\";\n\ntype InputProps = React.InputHTMLAttributes<HTMLInputElement> & {\n  leftIcon?: LucideIcon;\n};\n\nfunction Input({ leftIcon: LeftIcon, className, ...props }: InputProps) {\n  const name = React.use(FormFieldContext);\n  const fieldErrors = React.use(FormErrorContext);\n  const hasError = !!fieldErrors[name]?.length;\n\n  return (\n    <div className=\"relative flex items-center\">\n      {LeftIcon && (\n        <span className=\"absolute left-3 pointer-events-none flex items-center\">\n          <LeftIcon size={16} className=\"text-muted-foreground\" />\n        </span>\n      )}\n      <input\n        aria-invalid={hasError || undefined}\n        className={cn(\n          \"w-full min-h-11 rounded-md border border-border bg-muted text-sm\",\n          \"px-3 py-2 text-foreground\",\n          \"placeholder:text-muted-foreground\",\n          \"outline-none ring-offset-background\",\n          \"focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1\",\n          \"group-data-invalid:border-destructive group-data-invalid:focus-visible:ring-destructive\",\n          \"disabled:cursor-not-allowed disabled:opacity-50\",\n          LeftIcon && \"pl-9\",\n          className,\n        )}\n        {...props}\n      />\n    </div>\n  );\n}\n\nexport { Input };\nexport type { InputProps };\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

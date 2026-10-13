@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-textarea",
+  "title": "Textarea example",
+  "registryDependencies": [
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/textarea-demo.tsx",
+      "content": "import { Textarea } from \"~/client/components/ui/textarea\";\n\nexport default function TextareaDemo() {\n  return <Textarea placeholder=\"Escreva uma mensagem...\" className=\"max-w-sm\" />;\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

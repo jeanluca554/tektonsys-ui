@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "use-filter",
+  "title": "useFilter",
+  "description": "URL search-params filter helper for list pages (pagination, debounced search, clear filters).",
+  "dependencies": [
+    "react-router"
+  ],
+  "registryDependencies": [
+    "scoped-params"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/hooks/useFilter.ts",
+      "content": "import { useLocation, useNavigate } from \"react-router\";\nimport { useScopedParams } from \"~/lib/scopedParams\";\n\nfunction useFilter(scope: string) {\n  const navigate = useNavigate();\n  const location = useLocation();\n\n  const { getParam, getScopedSearch } = useScopedParams(location.search, scope);\n\n  function handlePageChange(page: number) {\n    navigate(getScopedSearch({ page }));\n  }\n\n  function handleClearFilters() {\n    navigate(location.pathname);\n  }\n\n  let searchTimeout: NodeJS.Timeout;\n  function handleChangeTimeoutFilter(filterName: string, value: string) {\n    clearTimeout(searchTimeout);\n\n    searchTimeout = setTimeout(() => {\n      if (value === \"\") {\n        navigate(getScopedSearch({ [filterName]: undefined, page: 1 }));\n        return;\n      }\n      navigate(getScopedSearch({ [filterName]: value, page: 1 }));\n    }, 500);\n  }\n\n  function handleChangeFilter(filterName: string, value: string) {\n    const scoped = getScopedSearch({\n      [filterName]: value === \"\" ? undefined : value,\n      page: 1,\n    });\n    navigate(scoped);\n  }\n\n  return {\n    handlePageChange,\n    handleChangeTimeoutFilter,\n    handleChangeFilter,\n    getParam,\n    handleClearFilters,\n  };\n}\n\nexport { useFilter };\n",
+      "type": "registry:hook"
+    }
+  ],
+  "type": "registry:hook"
+}

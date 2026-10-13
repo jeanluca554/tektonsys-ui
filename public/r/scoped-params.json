@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scoped-params",
+  "title": "useScopedParams",
+  "description": "URL search-params getter/setter helper with an optional key scope prefix.",
+  "files": [
+    {
+      "path": "registry/new-york/lib/scopedParams.ts",
+      "content": "function useScopedParams(search: string, scope = \"\") {\n  const params = new URLSearchParams(search);\n  const prefix = scope ? `${scope}:` : \"\";\n\n  function applyUpdates(updates: Record<string, string | number | undefined>) {\n    Object.entries(updates).forEach(([key, value]) => {\n      if (value === undefined) {\n        params.delete(`${prefix}${key}`);\n      } else {\n        params.set(`${prefix}${key}`, String(value));\n      }\n    });\n  }\n\n  return {\n    getParam: (key: string) => params.get(`${prefix}${key}`),\n    getScopedSearch: (updates: Record<string, string | number | undefined>) => {\n      applyUpdates(updates);\n      const search = params.toString();\n      return search ? `?${search}` : \"\";\n    },\n  };\n}\n\nexport { useScopedParams };\n",
+      "type": "registry:lib"
+    }
+  ],
+  "type": "registry:lib"
+}

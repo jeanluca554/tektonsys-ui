@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-table",
+  "title": "Table example",
+  "registryDependencies": [
+    "table"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/table-demo.tsx",
+      "content": "import { Table } from \"~/client/components/ui/table\";\n\nconst donors = [\n  { name: \"Maria Silva\", email: \"maria@email.com\", amount: \"R$ 150,00\" },\n  { name: \"João Souza\", email: \"joao@email.com\", amount: \"R$ 80,00\" },\n];\n\nexport default function TableDemo() {\n  return (\n    <Table.Root>\n      <Table.Header>\n        <Table.Row>\n          <Table.Head>Nome</Table.Head>\n          <Table.Head>E-mail</Table.Head>\n          <Table.Head>Valor</Table.Head>\n        </Table.Row>\n      </Table.Header>\n      <Table.Body>\n        {donors.map((donor) => (\n          <Table.Row key={donor.email}>\n            <Table.Cell>{donor.name}</Table.Cell>\n            <Table.Cell>{donor.email}</Table.Cell>\n            <Table.Cell>{donor.amount}</Table.Cell>\n          </Table.Row>\n        ))}\n      </Table.Body>\n    </Table.Root>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-currency-input",
+  "title": "Currency Input example",
+  "registryDependencies": [
+    "currency-input"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/currency-input-demo.tsx",
+      "content": "import { CurrencyInput } from \"~/client/components/ui/currency-input\";\n\nexport default function CurrencyInputDemo() {\n  return <CurrencyInput name=\"amount-demo\" defaultValue={150.5} className=\"max-w-xs\" />;\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

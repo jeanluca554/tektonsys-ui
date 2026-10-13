@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-card",
+  "title": "Card example",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/card-demo.tsx",
+      "content": "import { TrendingUp } from \"lucide-react\";\nimport { Card } from \"~/client/components/ui/card\";\n\nexport default function CardDemo() {\n  return (\n    <Card.Root className=\"max-w-sm\">\n      <Card.MetricHeader label=\"Receita mensal\" icon={TrendingUp} color=\"success\" />\n      <Card.MetricValue>R$ 24.500,00</Card.MetricValue>\n      <Card.MetricTrend value=\"+12% vs mês anterior\" direction=\"up\" />\n    </Card.Root>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

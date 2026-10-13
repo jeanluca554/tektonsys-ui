@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tab-button",
+  "title": "Tab Button",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/ui/tab-button.tsx",
+      "content": "import type { LucideIcon } from \"lucide-react\";\nimport type { ComponentProps } from \"react\";\nimport { cn } from \"~/lib/utils\";\nimport { Button } from \"./button\";\n\nfunction TabList({ className, ...props }: ComponentProps<\"div\">) {\n  return (\n    <div\n      className={cn(\n        \"flex w-fit items-center gap-1 rounded-[13px] border border-border bg-muted/60 p-1.5\",\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n\nfunction TabButton({\n  active,\n  onClick,\n  icon: Icon,\n  label,\n  count,\n  className,\n}: {\n  active: boolean;\n  onClick: () => void;\n  icon: LucideIcon;\n  label: string;\n  count?: number;\n  className?: string;\n}) {\n  return (\n    <Button\n      type=\"button\"\n      variant=\"ghost\"\n      onClick={onClick}\n      className={cn(\n        \"h-auto gap-2.5 rounded-xl px-3.5 py-1.5 text-base font-semibold\",\n        active\n          ? \"bg-[#e6e6ed] text-foreground hover:bg-[#e6e6ed] hover:text-foreground dark:bg-card dark:hover:bg-card\"\n          : \"text-muted-foreground hover:bg-transparent hover:text-muted-foreground\",\n        className,\n      )}\n    >\n      <Icon size={20} className=\"shrink-0\" />\n      {label}\n      {count !== undefined && (\n        <span className=\"rounded-full bg-muted-foreground/15 px-2.5 py-0.5 text-xs\">\n          {count}\n        </span>\n      )}\n    </Button>\n  );\n}\n\nexport const TabBar = { List: TabList, Button: TabButton };\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

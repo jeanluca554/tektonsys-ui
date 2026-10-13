@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination",
+  "title": "Pagination",
+  "dependencies": [
+    "lucide-react",
+    "react-router"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/ui/pagination.tsx",
+      "content": "import { ChevronLeft, ChevronRight, MoreHorizontal } from \"lucide-react\";\nimport { Link as RouterLink } from \"react-router\";\nimport { cn } from \"~/lib/utils\";\nimport type { ComponentProps } from \"react\";\n\nfunction Root({ className, ...props }: ComponentProps<\"nav\">) {\n  return (\n    <nav\n      role=\"navigation\"\n      aria-label=\"Paginação\"\n      className={className}\n      {...props}\n    />\n  );\n}\n\nfunction Content({ className, ...props }: ComponentProps<\"ul\">) {\n  return <ul className={cn(\"flex items-center gap-1\", className)} {...props} />;\n}\n\nfunction Item({ ...props }: ComponentProps<\"li\">) {\n  return <li {...props} />;\n}\n\ntype LinkProps = ComponentProps<\"a\"> & { isActive?: boolean; to?: string };\n\nfunction Link({ className, isActive, to, ...props }: LinkProps) {\n  const cls = cn(\n    \"flex size-7 items-center justify-center rounded-lg text-sm font-semibold\",\n    isActive\n      ? \"bg-(--primary) text-(--primary-foreground)\"\n      : \"text-(--muted-foreground) hover:bg-(--muted)\",\n    className,\n  );\n\n  if (to !== undefined) {\n    return (\n      <RouterLink\n        to={to}\n        preventScrollReset\n        aria-current={isActive ? \"page\" : undefined}\n        className={cls}\n        {...(props as any)}\n      />\n    );\n  }\n\n  return (\n    <a\n      aria-current={isActive ? \"page\" : undefined}\n      className={cls}\n      {...props}\n    />\n  );\n}\n\ntype NavProps = ComponentProps<\"a\"> & { to?: string; disabled?: boolean };\n\nfunction Previous({ className, to, disabled, ...props }: NavProps) {\n  const cls = cn(\n    \"flex size-7 items-center justify-center rounded-lg text-(--muted-foreground) hover:bg-(--muted)\",\n    disabled && \"pointer-events-none opacity-40\",\n    className,\n  );\n\n  if (to !== undefined) {\n    return (\n      <RouterLink\n        to={to}\n        preventScrollReset\n        aria-label=\"Página anterior\"\n        aria-disabled={disabled}\n        className={cls}\n        {...(props as any)}\n      >\n        <ChevronLeft size={16} />\n      </RouterLink>\n    );\n  }\n\n  return (\n    <a\n      aria-label=\"Página anterior\"\n      aria-disabled={disabled}\n      className={cls}\n      {...props}\n    >\n      <ChevronLeft size={16} />\n    </a>\n  );\n}\n\nfunction Next({ className, to, disabled, ...props }: NavProps) {\n  const cls = cn(\n    \"flex size-7 items-center justify-center rounded-lg text-(--muted-foreground) hover:bg-(--muted)\",\n    disabled && \"pointer-events-none opacity-40\",\n    className,\n  );\n\n  if (to !== undefined) {\n    return (\n      <RouterLink\n        to={to}\n        preventScrollReset\n        aria-label=\"Próxima página\"\n        aria-disabled={disabled}\n        className={cls}\n        {...(props as any)}\n      >\n        <ChevronRight size={16} />\n      </RouterLink>\n    );\n  }\n\n  return (\n    <a\n      aria-label=\"Próxima página\"\n      aria-disabled={disabled}\n      className={cls}\n      {...props}\n    >\n      <ChevronRight size={16} />\n    </a>\n  );\n}\n\nfunction Ellipsis({ className, ...props }: ComponentProps<\"span\">) {\n  return (\n    <span\n      aria-hidden\n      className={cn(\n        \"flex size-7 items-center justify-center text-muted-foreground\",\n        className,\n      )}\n      {...props}\n    >\n      <MoreHorizontal size={16} />\n      <span className=\"sr-only\">Mais páginas</span>\n    </span>\n  );\n}\n\nexport const Pagination = {\n  Root,\n  Content,\n  Item,\n  Link,\n  Previous,\n  Next,\n  Ellipsis,\n};\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

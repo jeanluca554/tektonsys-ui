@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge",
+  "title": "Badge",
+  "dependencies": [
+    "tailwind-variants"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/ui/badge.tsx",
+      "content": "import { tv, type VariantProps } from \"tailwind-variants\";\nimport type { ComponentProps } from \"react\";\n\nconst badge = tv({\n  base: \"inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold whitespace-nowrap [&>[data-icon]]:shrink-0\",\n  variants: {\n    variant: {\n      success:\n        \"bg-[rgba(var(--spotlight-success),0.1)] text-[rgb(var(--spotlight-success))]\",\n      danger:\n        \"bg-[rgba(var(--spotlight-danger),0.1)] text-[rgb(var(--spotlight-danger))]\",\n      warning:\n        \"bg-[rgba(var(--spotlight-warning),0.1)] text-[rgb(var(--spotlight-warning))]\",\n      info: \"bg-[rgba(var(--spotlight-info),0.1)] text-[rgb(var(--spotlight-info))]\",\n      neutral: \"bg-(--muted) text-(--text-muted)\",\n      violet: \"bg-(--badge-violet-bg) text-(--badge-violet-text)\",\n      emerald: \"bg-(--badge-emerald-bg) text-(--badge-emerald-text)\",\n      navy: \"bg-(--badge-navy-bg) text-(--badge-navy-text)\",\n      amber: \"bg-(--badge-amber-bg) text-(--badge-amber-text)\",\n      rose: \"bg-(--badge-rose-bg) text-(--badge-rose-text)\",\n    },\n  },\n  defaultVariants: {\n    variant: \"info\",\n  },\n});\n\ntype BadgeVariants = VariantProps<typeof badge>;\ntype BadgeProps = ComponentProps<\"span\"> & BadgeVariants;\n\nexport function Badge({ className, variant, ...props }: BadgeProps) {\n  return <span className={badge({ variant, className })} {...props} />;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

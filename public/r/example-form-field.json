@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-form-field",
+  "title": "Form Field example",
+  "registryDependencies": [
+    "form-field",
+    "input"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/form-field-demo.tsx",
+      "content": "import { FormErrorProvider, FormField } from \"~/client/components/ui/form-field\";\nimport { Input } from \"~/client/components/ui/input\";\n\nexport default function FormFieldDemo() {\n  return (\n    <FormErrorProvider fieldErrors={{ email: [\"E-mail inválido.\"] }}>\n      <FormField name=\"email\" label=\"E-mail\" required>\n        <Input name=\"email\" placeholder=\"voce@empresa.com\" />\n      </FormField>\n    </FormErrorProvider>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

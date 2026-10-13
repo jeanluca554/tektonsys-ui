@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "trash-dashed-border-circle",
+  "title": "Trash Dashed Border Circle",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/ui/trash-dashed-border-circle.tsx",
+      "content": "import { Trash2 } from \"lucide-react\";\n\nfunction TrashDashedBorderCircle() {\n  return (\n    <div className=\"flex items-center justify-center\">\n      <div className=\"flex size-30 items-center justify-center rounded-full border border-dashed border-(--border) bg-muted p-[15px]\">\n        <div className=\"flex size-[90px] items-center justify-center rounded-full bg-destructive\">\n          <Trash2 className=\"size-12 text-white\" />\n        </div>\n      </div>\n    </div>\n  );\n}\n\nexport { TrashDashedBorderCircle };\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

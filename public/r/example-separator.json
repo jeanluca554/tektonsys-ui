@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-separator",
+  "title": "Separator example",
+  "registryDependencies": [
+    "separator"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/separator-demo.tsx",
+      "content": "import { Separator } from \"~/client/components/ui/separator\";\n\nexport default function SeparatorDemo() {\n  return (\n    <div className=\"w-64\">\n      <p className=\"text-sm\">Acima da linha</p>\n      <Separator className=\"my-4\" />\n      <p className=\"text-sm\">Abaixo da linha</p>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

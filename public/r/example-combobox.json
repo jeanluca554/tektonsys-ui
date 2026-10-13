@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-combobox",
+  "title": "Combobox example",
+  "registryDependencies": [
+    "combobox"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/combobox-demo.tsx",
+      "content": "import { useState } from \"react\";\nimport { Combobox } from \"~/client/components/ui/combobox\";\n\nconst options = [\n  { value: \"sp\", label: \"São Paulo\" },\n  { value: \"rj\", label: \"Rio de Janeiro\" },\n  { value: \"mg\", label: \"Minas Gerais\" },\n];\n\nexport default function ComboboxDemo() {\n  const [value, setValue] = useState(\"\");\n  return (\n    <Combobox\n      options={options}\n      value={value}\n      onChange={setValue}\n      placeholder=\"Selecione um estado\"\n      className=\"max-w-xs\"\n    />\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

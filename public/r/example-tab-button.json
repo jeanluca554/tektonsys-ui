@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-tab-button",
+  "title": "Tab Button example",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "tab-button"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/tab-button-demo.tsx",
+      "content": "import { Bell, Inbox } from \"lucide-react\";\nimport { useState } from \"react\";\nimport { TabBar } from \"~/client/components/ui/tab-button\";\n\nexport default function TabButtonDemo() {\n  const [active, setActive] = useState(\"inbox\");\n  return (\n    <TabBar.List>\n      <TabBar.Button\n        active={active === \"inbox\"}\n        onClick={() => setActive(\"inbox\")}\n        icon={Inbox}\n        label=\"Caixa de entrada\"\n        count={4}\n      />\n      <TabBar.Button\n        active={active === \"alerts\"}\n        onClick={() => setActive(\"alerts\")}\n        icon={Bell}\n        label=\"Alertas\"\n      />\n    </TabBar.List>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

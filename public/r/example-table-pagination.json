@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-table-pagination",
+  "title": "Table Pagination example",
+  "registryDependencies": [
+    "table-pagination"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/table-pagination-demo.tsx",
+      "content": "import { TablePagination } from \"~/client/components/ui/table-pagination\";\n\nexport default function TablePaginationDemo() {\n  return (\n    <TablePagination currentPage={3} totalPages={10} buildPageUrl={(page) => `#page-${page}`} />\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

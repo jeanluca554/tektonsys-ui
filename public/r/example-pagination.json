@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-pagination",
+  "title": "Pagination example",
+  "registryDependencies": [
+    "pagination"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/pagination-demo.tsx",
+      "content": "import { Pagination } from \"~/client/components/ui/pagination\";\n\nexport default function PaginationDemo() {\n  return (\n    <Pagination.Root>\n      <Pagination.Content>\n        <Pagination.Item>\n          <Pagination.Previous />\n        </Pagination.Item>\n        <Pagination.Item>\n          <Pagination.Link isActive>1</Pagination.Link>\n        </Pagination.Item>\n        <Pagination.Item>\n          <Pagination.Link>2</Pagination.Link>\n        </Pagination.Item>\n        <Pagination.Item>\n          <Pagination.Link>3</Pagination.Link>\n        </Pagination.Item>\n        <Pagination.Item>\n          <Pagination.Ellipsis />\n        </Pagination.Item>\n        <Pagination.Item>\n          <Pagination.Next />\n        </Pagination.Item>\n      </Pagination.Content>\n    </Pagination.Root>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-select",
+  "title": "Select example",
+  "registryDependencies": [
+    "select"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/select-demo.tsx",
+      "content": "import { Select } from \"~/client/components/ui/select\";\n\nexport default function SelectDemo() {\n  return (\n    <Select.Root defaultValue=\"monthly\">\n      <Select.Trigger className=\"max-w-xs\">\n        <Select.Value />\n      </Select.Trigger>\n      <Select.Content>\n        <Select.Item value=\"monthly\">Mensal</Select.Item>\n        <Select.Item value=\"quarterly\">Trimestral</Select.Item>\n        <Select.Item value=\"yearly\">Anual</Select.Item>\n      </Select.Content>\n    </Select.Root>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

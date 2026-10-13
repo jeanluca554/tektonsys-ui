@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-field",
+  "title": "Field example",
+  "registryDependencies": [
+    "field",
+    "input"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/field-demo.tsx",
+      "content": "import { Field } from \"~/client/components/ui/field\";\nimport { Input } from \"~/client/components/ui/input\";\n\nexport default function FieldDemo() {\n  return (\n    <Field.Set>\n      <Field.Root>\n        <Field.Content>\n          <Field.Label htmlFor=\"name-demo\">Nome completo</Field.Label>\n          <Input id=\"name-demo\" placeholder=\"Maria Silva\" />\n          <Field.Description>Como aparece no documento oficial.</Field.Description>\n        </Field.Content>\n      </Field.Root>\n    </Field.Set>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

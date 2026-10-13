@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-label",
+  "title": "Label example",
+  "registryDependencies": [
+    "label"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/label-demo.tsx",
+      "content": "import { Label } from \"~/client/components/ui/label\";\n\nexport default function LabelDemo() {\n  return <Label htmlFor=\"email-demo\">Endereço de e-mail</Label>;\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

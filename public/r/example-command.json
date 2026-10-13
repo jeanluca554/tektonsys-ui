@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-command",
+  "title": "Command example",
+  "registryDependencies": [
+    "command"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/command-demo.tsx",
+      "content": "import {\n  Command,\n  CommandEmpty,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList,\n} from \"~/client/components/ui/command\";\n\nexport default function CommandDemo() {\n  return (\n    <Command className=\"max-w-sm rounded-lg border border-border\">\n      <CommandInput placeholder=\"Buscar comando...\" />\n      <CommandList>\n        <CommandEmpty>Nenhum resultado.</CommandEmpty>\n        <CommandGroup heading=\"Ações\">\n          <CommandItem>Nova campanha</CommandItem>\n          <CommandItem>Novo doador</CommandItem>\n          <CommandItem>Exportar relatório</CommandItem>\n        </CommandGroup>\n      </CommandList>\n    </Command>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

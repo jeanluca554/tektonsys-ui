@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label",
+  "title": "Label",
+  "registryDependencies": [
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/ui/label.tsx",
+      "content": "import * as React from \"react\";\n\nimport { cn } from \"~/lib/utils\";\n\nfunction Label({\n  className,\n  ...props\n}: React.LabelHTMLAttributes<HTMLLabelElement>) {\n  return (\n    <label\n      className={cn(\n        \"text-sm font-medium leading-none select-none text-(--foreground)\",\n        className\n      )}\n      {...props}\n    />\n  );\n}\n\nexport { Label };\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

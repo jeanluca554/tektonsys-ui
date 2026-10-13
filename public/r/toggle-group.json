@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group",
+  "title": "Toggle Group",
+  "dependencies": [
+    "radix-ui",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/ui/toggle-group.tsx",
+      "content": "import { type ReactNode, type ComponentProps } from \"react\";\nimport { ToggleGroup as ToggleGroupPrimitive } from \"radix-ui\";\nimport { tv, type VariantProps } from \"tailwind-variants\";\nimport { cn } from \"~/lib/utils\";\n\nconst toggleGroupItem = tv({\n  base: [\n    \"rounded-md transition-colors cursor-pointer\",\n    \"disabled:cursor-not-allowed disabled:opacity-50\",\n  ],\n  variants: {\n    variant: {\n      default: [\n        \"h-9 px-4 text-sm font-medium border\",\n        \"data-[state=off]:border-(--border) data-[state=off]:bg-(--card) data-[state=off]:text-(--foreground) data-[state=off]:hover:bg-(--accent)\",\n        \"data-[state=on]:border-(--primary) data-[state=on]:bg-(--primary) data-[state=on]:text-white\",\n      ],\n      icon: [\n        \"size-8 flex items-center justify-center rounded-lg\",\n        \"data-[state=off]:bg-transparent data-[state=off]:hover:bg-accent data-[state=off]:text-foreground\",\n        \"data-[state=on]:bg-foreground/15 data-[state=on]:text-foreground\",\n      ],\n    },\n  },\n  defaultVariants: {\n    variant: \"default\",\n  },\n});\n\ntype SingleRootProps = {\n  type?: \"single\";\n  name?: string;\n  value?: string;\n  onValueChange?: (value: string) => void;\n  disabled?: boolean;\n  className?: string;\n  children?: ReactNode;\n};\n\ntype MultipleRootProps = {\n  type: \"multiple\";\n  value?: string[];\n  onValueChange?: (value: string[]) => void;\n  disabled?: boolean;\n  className?: string;\n  children?: ReactNode;\n};\n\nfunction Root(props: SingleRootProps | MultipleRootProps) {\n  if (props.type === \"multiple\") {\n    return (\n      <ToggleGroupPrimitive.Root\n        type=\"multiple\"\n        value={props.value ?? []}\n        onValueChange={props.onValueChange}\n        disabled={props.disabled}\n        className={cn(\"flex gap-2\", props.className)}\n      >\n        {props.children}\n      </ToggleGroupPrimitive.Root>\n    );\n  }\n\n  return (\n    <ToggleGroupPrimitive.Root\n      type=\"single\"\n      value={props.value ?? \"\"}\n      onValueChange={(v) => { if (v) props.onValueChange?.(v); }}\n      disabled={props.disabled}\n      className={cn(\"flex gap-2\", props.className)}\n    >\n      {props.name && <input type=\"hidden\" name={props.name} value={props.value ?? \"\"} />}\n      {props.children}\n    </ToggleGroupPrimitive.Root>\n  );\n}\n\ntype ItemProps = ComponentProps<typeof ToggleGroupPrimitive.Item> & VariantProps<typeof toggleGroupItem>;\n\nfunction Item({ className, variant, ...props }: ItemProps) {\n  return (\n    <ToggleGroupPrimitive.Item\n      className={toggleGroupItem({ variant, className })}\n      {...props}\n    />\n  );\n}\n\nexport const ToggleGroup = { Root, Item };\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
