@@ -3,7 +3,7 @@
   "name": "example-alert",
   "title": "Alert example",
   "registryDependencies": [
-    "alert"
+    "@ds/alert"
   ],
   "files": [
     {

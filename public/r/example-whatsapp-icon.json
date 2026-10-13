@@ -3,7 +3,7 @@
   "name": "example-whatsapp-icon",
   "title": "WhatsApp Icon example",
   "registryDependencies": [
-    "whatsapp-icon"
+    "@ds/whatsapp-icon"
   ],
   "files": [
     {

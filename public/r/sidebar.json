@@ -8,14 +8,14 @@
     "tailwind-variants"
   ],
   "registryDependencies": [
-    "button",
-    "input",
-    "separator",
-    "sheet",
-    "skeleton",
-    "tooltip",
-    "use-mobile",
-    "utils"
+    "@ds/button",
+    "@ds/input",
+    "@ds/separator",
+    "@ds/sheet",
+    "@ds/skeleton",
+    "@ds/tooltip",
+    "@ds/use-mobile",
+    "@ds/utils"
   ],
   "files": [
     {

@@ -3,7 +3,7 @@
   "name": "example-currency-input",
   "title": "Currency Input example",
   "registryDependencies": [
-    "currency-input"
+    "@ds/currency-input"
   ],
   "files": [
     {

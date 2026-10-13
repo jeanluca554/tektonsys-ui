@@ -7,7 +7,7 @@
     "react-router"
   ],
   "registryDependencies": [
-    "utils"
+    "@ds/utils"
   ],
   "files": [
     {

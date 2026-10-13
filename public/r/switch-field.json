@@ -3,9 +3,9 @@
   "name": "switch-field",
   "title": "Switch Field",
   "registryDependencies": [
-    "label",
-    "switch",
-    "utils"
+    "@ds/label",
+    "@ds/switch",
+    "@ds/utils"
   ],
   "files": [
     {

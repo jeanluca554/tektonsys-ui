@@ -7,8 +7,8 @@
     "radix-ui"
   ],
   "registryDependencies": [
-    "form-field",
-    "utils"
+    "@ds/form-field",
+    "@ds/utils"
   ],
   "files": [
     {

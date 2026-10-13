@@ -6,7 +6,7 @@
     "tailwind-variants"
   ],
   "registryDependencies": [
-    "utils"
+    "@ds/utils"
   ],
   "files": [
     {

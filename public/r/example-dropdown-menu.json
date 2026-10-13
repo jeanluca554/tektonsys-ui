@@ -3,8 +3,8 @@
   "name": "example-dropdown-menu",
   "title": "Dropdown Menu example",
   "registryDependencies": [
-    "dropdown-menu",
-    "button"
+    "@ds/dropdown-menu",
+    "@ds/button"
   ],
   "files": [
     {

@@ -3,7 +3,7 @@
   "name": "example-image-upload",
   "title": "Image Upload example",
   "registryDependencies": [
-    "image-upload"
+    "@ds/image-upload"
   ],
   "files": [
     {

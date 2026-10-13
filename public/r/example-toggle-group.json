@@ -6,7 +6,7 @@
     "lucide-react"
   ],
   "registryDependencies": [
-    "toggle-group"
+    "@ds/toggle-group"
   ],
   "files": [
     {

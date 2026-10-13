@@ -7,8 +7,8 @@
     "lucide-react"
   ],
   "registryDependencies": [
-    "dialog",
-    "utils"
+    "@ds/dialog",
+    "@ds/utils"
   ],
   "files": [
     {

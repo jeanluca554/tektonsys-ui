@@ -3,8 +3,8 @@
   "name": "form-field",
   "title": "Form Field",
   "registryDependencies": [
-    "label",
-    "utils"
+    "@ds/label",
+    "@ds/utils"
   ],
   "files": [
     {

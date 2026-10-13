@@ -3,7 +3,7 @@
   "name": "example-phone-input",
   "title": "Phone Input example",
   "registryDependencies": [
-    "phone-input"
+    "@ds/phone-input"
   ],
   "files": [
     {

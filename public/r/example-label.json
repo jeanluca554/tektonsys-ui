@@ -3,7 +3,7 @@
   "name": "example-label",
   "title": "Label example",
   "registryDependencies": [
-    "label"
+    "@ds/label"
   ],
   "files": [
     {

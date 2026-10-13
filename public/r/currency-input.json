@@ -3,8 +3,8 @@
   "name": "currency-input",
   "title": "Currency Input",
   "registryDependencies": [
-    "form-field",
-    "utils"
+    "@ds/form-field",
+    "@ds/utils"
   ],
   "files": [
     {

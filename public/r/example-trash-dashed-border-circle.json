@@ -3,7 +3,7 @@
   "name": "example-trash-dashed-border-circle",
   "title": "Trash Dashed Border Circle example",
   "registryDependencies": [
-    "trash-dashed-border-circle"
+    "@ds/trash-dashed-border-circle"
   ],
   "files": [
     {

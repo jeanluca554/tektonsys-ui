@@ -8,7 +8,10 @@
       "type": "registry:lib",
       "title": "cn utility",
       "description": "clsx + tailwind-merge class name helper.",
-      "dependencies": ["clsx", "tailwind-merge"],
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
       "files": [
         {
           "path": "registry/new-york/lib/utils.ts",
@@ -35,7 +38,10 @@
       "title": "useIsMobile",
       "description": "Mobile breakpoint detection hook.",
       "files": [
-        { "path": "registry/new-york/hooks/use-mobile.ts", "type": "registry:hook" }
+        {
+          "path": "registry/new-york/hooks/use-mobile.ts",
+          "type": "registry:hook"
+        }
       ]
     },
     {
@@ -44,7 +50,10 @@
       "title": "useTheme",
       "description": "Light/dark theme context provider and hook.",
       "files": [
-        { "path": "registry/new-york/hooks/useTheme.tsx", "type": "registry:hook" }
+        {
+          "path": "registry/new-york/hooks/useTheme.tsx",
+          "type": "registry:hook"
+        }
       ]
     },
     {
@@ -53,7 +62,10 @@
       "title": "useScopedParams",
       "description": "URL search-params getter/setter helper with an optional key scope prefix.",
       "files": [
-        { "path": "registry/new-york/lib/scopedParams.ts", "type": "registry:lib" }
+        {
+          "path": "registry/new-york/lib/scopedParams.ts",
+          "type": "registry:lib"
+        }
       ]
     },
     {
@@ -61,10 +73,17 @@
       "type": "registry:hook",
       "title": "useFilter",
       "description": "URL search-params filter helper for list pages (pagination, debounced search, clear filters).",
-      "dependencies": ["react-router"],
-      "registryDependencies": ["scoped-params"],
+      "dependencies": [
+        "react-router"
+      ],
+      "registryDependencies": [
+        "@ds/scoped-params"
+      ],
       "files": [
-        { "path": "registry/new-york/hooks/useFilter.ts", "type": "registry:hook" }
+        {
+          "path": "registry/new-york/hooks/useFilter.ts",
+          "type": "registry:hook"
+        }
       ]
     },
     {
@@ -72,104 +91,1361 @@
       "type": "registry:hook",
       "title": "useQueryToast",
       "description": "Shows a sonner toast driven by a URL query param, then strips the param from the URL.",
-      "dependencies": ["react-router", "sonner"],
-      "registryDependencies": ["scoped-params"],
+      "dependencies": [
+        "react-router",
+        "sonner"
+      ],
+      "registryDependencies": [
+        "@ds/scoped-params"
+      ],
       "files": [
-        { "path": "registry/new-york/hooks/useQueryToast.ts", "type": "registry:hook" }
+        {
+          "path": "registry/new-york/hooks/useQueryToast.ts",
+          "type": "registry:hook"
+        }
       ]
     },
-    { "name": "alert", "type": "registry:ui", "title": "Alert", "dependencies": ["tailwind-variants"], "files": [{ "path": "registry/new-york/ui/alert.tsx", "type": "registry:ui" }] },
-    { "name": "avatar", "type": "registry:ui", "title": "Avatar", "dependencies": ["radix-ui"], "registryDependencies": ["utils"], "files": [{ "path": "registry/new-york/ui/avatar.tsx", "type": "registry:ui" }] },
-    { "name": "badge", "type": "registry:ui", "title": "Badge", "dependencies": ["tailwind-variants"], "files": [{ "path": "registry/new-york/ui/badge.tsx", "type": "registry:ui" }] },
-    { "name": "button", "type": "registry:ui", "title": "Button", "dependencies": ["@radix-ui/react-slot", "tailwind-variants"], "files": [{ "path": "registry/new-york/ui/button.tsx", "type": "registry:ui" }] },
-    { "name": "card", "type": "registry:ui", "title": "Card", "dependencies": ["lucide-react", "tailwind-variants"], "registryDependencies": ["utils"], "files": [{ "path": "registry/new-york/ui/card.tsx", "type": "registry:ui" }] },
-    { "name": "checkbox", "type": "registry:ui", "title": "Checkbox", "dependencies": ["lucide-react", "@radix-ui/react-checkbox"], "registryDependencies": ["utils"], "files": [{ "path": "registry/new-york/ui/checkbox.tsx", "type": "registry:ui" }] },
-    { "name": "dropdown-menu", "type": "registry:ui", "title": "Dropdown Menu", "dependencies": ["lucide-react", "radix-ui"], "registryDependencies": ["utils"], "files": [{ "path": "registry/new-york/ui/dropdown-menu.tsx", "type": "registry:ui" }] },
-    { "name": "empty", "type": "registry:ui", "title": "Empty", "dependencies": ["tailwind-variants"], "registryDependencies": ["utils"], "files": [{ "path": "registry/new-york/ui/empty.tsx", "type": "registry:ui" }] },
-    { "name": "label", "type": "registry:ui", "title": "Label", "registryDependencies": ["utils"], "files": [{ "path": "registry/new-york/ui/label.tsx", "type": "registry:ui" }] },
-    { "name": "pagination", "type": "registry:ui", "title": "Pagination", "dependencies": ["lucide-react", "react-router"], "registryDependencies": ["utils"], "files": [{ "path": "registry/new-york/ui/pagination.tsx", "type": "registry:ui" }] },
-    { "name": "popover", "type": "registry:ui", "title": "Popover", "dependencies": ["radix-ui"], "registryDependencies": ["utils"], "files": [{ "path": "registry/new-york/ui/popover.tsx", "type": "registry:ui" }] },
-    { "name": "progress", "type": "registry:ui", "title": "Progress", "dependencies": ["radix-ui"], "registryDependencies": ["utils"], "files": [{ "path": "registry/new-york/ui/progress.tsx", "type": "registry:ui" }] },
-    { "name": "radio-group", "type": "registry:ui", "title": "Radio Group", "dependencies": ["lucide-react", "radix-ui"], "registryDependencies": ["utils"], "files": [{ "path": "registry/new-york/ui/radio-group.tsx", "type": "registry:ui" }] },
-    { "name": "scroll-area", "type": "registry:ui", "title": "Scroll Area", "dependencies": ["radix-ui"], "registryDependencies": ["utils"], "files": [{ "path": "registry/new-york/ui/scroll-area.tsx", "type": "registry:ui" }] },
-    { "name": "separator", "type": "registry:ui", "title": "Separator", "dependencies": ["radix-ui"], "registryDependencies": ["utils"], "files": [{ "path": "registry/new-york/ui/separator.tsx", "type": "registry:ui" }] },
-    { "name": "sheet", "type": "registry:ui", "title": "Sheet", "dependencies": ["lucide-react", "radix-ui"], "registryDependencies": ["utils"], "files": [{ "path": "registry/new-york/ui/sheet.tsx", "type": "registry:ui" }] },
-    { "name": "skeleton", "type": "registry:ui", "title": "Skeleton", "registryDependencies": ["utils"], "files": [{ "path": "registry/new-york/ui/skeleton.tsx", "type": "registry:ui" }] },
-    { "name": "sonner", "type": "registry:ui", "title": "Sonner toaster", "dependencies": ["lucide-react", "sonner"], "files": [{ "path": "registry/new-york/ui/sonner.tsx", "type": "registry:ui" }] },
-    { "name": "switch", "type": "registry:ui", "title": "Switch", "dependencies": ["radix-ui"], "registryDependencies": ["utils"], "files": [{ "path": "registry/new-york/ui/switch.tsx", "type": "registry:ui" }] },
-    { "name": "toggle-group", "type": "registry:ui", "title": "Toggle Group", "dependencies": ["radix-ui", "tailwind-variants"], "registryDependencies": ["utils"], "files": [{ "path": "registry/new-york/ui/toggle-group.tsx", "type": "registry:ui" }] },
-    { "name": "tooltip", "type": "registry:ui", "title": "Tooltip", "dependencies": ["radix-ui"], "registryDependencies": ["utils"], "files": [{ "path": "registry/new-york/ui/tooltip.tsx", "type": "registry:ui" }] },
-    { "name": "trash-dashed-border-circle", "type": "registry:ui", "title": "Trash Dashed Border Circle", "dependencies": ["lucide-react"], "files": [{ "path": "registry/new-york/ui/trash-dashed-border-circle.tsx", "type": "registry:ui" }] },
-    { "name": "whatsapp-icon", "type": "registry:ui", "title": "WhatsApp Icon", "files": [{ "path": "registry/new-york/ui/whatsapp-icon.tsx", "type": "registry:ui" }] },
-    { "name": "dialog", "type": "registry:ui", "title": "Dialog", "dependencies": ["lucide-react", "radix-ui"], "registryDependencies": ["button", "utils"], "files": [{ "path": "registry/new-york/ui/dialog.tsx", "type": "registry:ui" }] },
-    { "name": "field", "type": "registry:ui", "title": "Field", "dependencies": ["tailwind-variants"], "registryDependencies": ["label", "separator", "utils"], "files": [{ "path": "registry/new-york/ui/field.tsx", "type": "registry:ui" }] },
-    { "name": "form-field", "type": "registry:ui", "title": "Form Field", "registryDependencies": ["label", "utils"], "files": [{ "path": "registry/new-york/ui/form-field.tsx", "type": "registry:ui" }] },
-    { "name": "switch-field", "type": "registry:ui", "title": "Switch Field", "registryDependencies": ["label", "switch", "utils"], "files": [{ "path": "registry/new-york/ui/switch-field.tsx", "type": "registry:ui" }] },
-    { "name": "tab-button", "type": "registry:ui", "title": "Tab Button", "dependencies": ["lucide-react"], "registryDependencies": ["button", "utils"], "files": [{ "path": "registry/new-york/ui/tab-button.tsx", "type": "registry:ui" }] },
-    { "name": "table-pagination", "type": "registry:ui", "title": "Table Pagination", "dependencies": ["react-router"], "registryDependencies": ["pagination"], "files": [{ "path": "registry/new-york/ui/table-pagination.tsx", "type": "registry:ui" }] },
-    { "name": "table", "type": "registry:ui", "title": "Table", "dependencies": ["lucide-react"], "registryDependencies": ["empty", "utils"], "files": [{ "path": "registry/new-york/ui/table.tsx", "type": "registry:ui" }] },
-    { "name": "command", "type": "registry:ui", "title": "Command", "dependencies": ["cmdk", "lucide-react"], "registryDependencies": ["dialog", "utils"], "files": [{ "path": "registry/new-york/ui/command.tsx", "type": "registry:ui" }] },
-    { "name": "currency-input", "type": "registry:ui", "title": "Currency Input", "registryDependencies": ["form-field", "utils"], "files": [{ "path": "registry/new-york/ui/currency-input.tsx", "type": "registry:ui" }] },
-    { "name": "file-upload-compact", "type": "registry:ui", "title": "File Upload Compact", "dependencies": ["lucide-react"], "registryDependencies": ["button", "form-field", "utils"], "files": [{ "path": "registry/new-york/ui/file-upload-compact.tsx", "type": "registry:ui" }] },
-    { "name": "image-upload-compact", "type": "registry:ui", "title": "Image Upload Compact", "dependencies": ["lucide-react"], "registryDependencies": ["button", "form-field", "utils"], "files": [{ "path": "registry/new-york/ui/image-upload-compact.tsx", "type": "registry:ui" }] },
-    { "name": "image-upload", "type": "registry:ui", "title": "Image Upload", "dependencies": ["lucide-react"], "registryDependencies": ["button", "form-field", "utils"], "files": [{ "path": "registry/new-york/ui/image-upload.tsx", "type": "registry:ui" }] },
-    { "name": "input-group", "type": "registry:ui", "title": "Input Group", "registryDependencies": ["form-field", "utils"], "files": [{ "path": "registry/new-york/ui/input-group.tsx", "type": "registry:ui" }] },
-    { "name": "input", "type": "registry:ui", "title": "Input", "dependencies": ["lucide-react"], "registryDependencies": ["form-field", "utils"], "files": [{ "path": "registry/new-york/ui/input.tsx", "type": "registry:ui" }] },
-    { "name": "select", "type": "registry:ui", "title": "Select", "dependencies": ["lucide-react", "radix-ui"], "registryDependencies": ["form-field", "utils"], "files": [{ "path": "registry/new-york/ui/select.tsx", "type": "registry:ui" }] },
-    { "name": "textarea", "type": "registry:ui", "title": "Textarea", "registryDependencies": ["form-field", "utils"], "files": [{ "path": "registry/new-york/ui/textarea.tsx", "type": "registry:ui" }] },
-    { "name": "combobox", "type": "registry:ui", "title": "Combobox", "dependencies": ["lucide-react"], "registryDependencies": ["button", "command", "popover"], "files": [{ "path": "registry/new-york/ui/combobox.tsx", "type": "registry:ui" }] },
-    { "name": "phone-input", "type": "registry:ui", "title": "Phone Input", "dependencies": ["lucide-react", "react-phone-number-input"], "registryDependencies": ["button", "command", "input", "popover", "scroll-area", "utils"], "files": [{ "path": "registry/new-york/ui/phone-input.tsx", "type": "registry:ui" }] },
-    { "name": "sidebar", "type": "registry:ui", "title": "Sidebar", "dependencies": ["lucide-react", "radix-ui", "tailwind-variants"], "registryDependencies": ["button", "input", "separator", "sheet", "skeleton", "tooltip", "use-mobile", "utils"], "files": [{ "path": "registry/new-york/ui/sidebar.tsx", "type": "registry:ui" }] },
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "title": "Alert",
+      "dependencies": [
+        "tailwind-variants"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/alert.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Avatar",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/avatar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "dependencies": [
+        "tailwind-variants"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "tailwind-variants"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "dependencies": [
+        "lucide-react",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "dependencies": [
+        "lucide-react",
+        "@radix-ui/react-checkbox"
+      ],
+      "registryDependencies": [
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/checkbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:ui",
+      "title": "Dropdown Menu",
+      "dependencies": [
+        "lucide-react",
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/dropdown-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "empty",
+      "type": "registry:ui",
+      "title": "Empty",
+      "dependencies": [
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/empty.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "label",
+      "type": "registry:ui",
+      "title": "Label",
+      "registryDependencies": [
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/label.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:ui",
+      "title": "Pagination",
+      "dependencies": [
+        "lucide-react",
+        "react-router"
+      ],
+      "registryDependencies": [
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/pagination.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/popover.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "progress",
+      "type": "registry:ui",
+      "title": "Progress",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/progress.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "title": "Radio Group",
+      "dependencies": [
+        "lucide-react",
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/radio-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "scroll-area",
+      "type": "registry:ui",
+      "title": "Scroll Area",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/scroll-area.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/separator.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sheet",
+      "type": "registry:ui",
+      "title": "Sheet",
+      "dependencies": [
+        "lucide-react",
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/sheet.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "registryDependencies": [
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/skeleton.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sonner",
+      "type": "registry:ui",
+      "title": "Sonner toaster",
+      "dependencies": [
+        "lucide-react",
+        "sonner"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/sonner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/switch.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toggle-group",
+      "type": "registry:ui",
+      "title": "Toggle Group",
+      "dependencies": [
+        "radix-ui",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/toggle-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/tooltip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "trash-dashed-border-circle",
+      "type": "registry:ui",
+      "title": "Trash Dashed Border Circle",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/trash-dashed-border-circle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "whatsapp-icon",
+      "type": "registry:ui",
+      "title": "WhatsApp Icon",
+      "files": [
+        {
+          "path": "registry/new-york/ui/whatsapp-icon.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "dependencies": [
+        "lucide-react",
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "@ds/button",
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "field",
+      "type": "registry:ui",
+      "title": "Field",
+      "dependencies": [
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@ds/label",
+        "@ds/separator",
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "form-field",
+      "type": "registry:ui",
+      "title": "Form Field",
+      "registryDependencies": [
+        "@ds/label",
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/form-field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "switch-field",
+      "type": "registry:ui",
+      "title": "Switch Field",
+      "registryDependencies": [
+        "@ds/label",
+        "@ds/switch",
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/switch-field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tab-button",
+      "type": "registry:ui",
+      "title": "Tab Button",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "@ds/button",
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/tab-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "table-pagination",
+      "type": "registry:ui",
+      "title": "Table Pagination",
+      "dependencies": [
+        "react-router"
+      ],
+      "registryDependencies": [
+        "@ds/pagination"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/table-pagination.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "table",
+      "type": "registry:ui",
+      "title": "Table",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "@ds/empty",
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "command",
+      "type": "registry:ui",
+      "title": "Command",
+      "dependencies": [
+        "cmdk",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "@ds/dialog",
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/command.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "currency-input",
+      "type": "registry:ui",
+      "title": "Currency Input",
+      "registryDependencies": [
+        "@ds/form-field",
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/currency-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "file-upload-compact",
+      "type": "registry:ui",
+      "title": "File Upload Compact",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "@ds/button",
+        "@ds/form-field",
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/file-upload-compact.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "image-upload-compact",
+      "type": "registry:ui",
+      "title": "Image Upload Compact",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "@ds/button",
+        "@ds/form-field",
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/image-upload-compact.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "image-upload",
+      "type": "registry:ui",
+      "title": "Image Upload",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "@ds/button",
+        "@ds/form-field",
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/image-upload.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group",
+      "type": "registry:ui",
+      "title": "Input Group",
+      "registryDependencies": [
+        "@ds/form-field",
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/input-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "@ds/form-field",
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "dependencies": [
+        "lucide-react",
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "@ds/form-field",
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "Textarea",
+      "registryDependencies": [
+        "@ds/form-field",
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/textarea.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "combobox",
+      "type": "registry:ui",
+      "title": "Combobox",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "@ds/button",
+        "@ds/command",
+        "@ds/popover"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/combobox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "phone-input",
+      "type": "registry:ui",
+      "title": "Phone Input",
+      "dependencies": [
+        "lucide-react",
+        "react-phone-number-input"
+      ],
+      "registryDependencies": [
+        "@ds/button",
+        "@ds/command",
+        "@ds/input",
+        "@ds/popover",
+        "@ds/scroll-area",
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/phone-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sidebar",
+      "type": "registry:ui",
+      "title": "Sidebar",
+      "dependencies": [
+        "lucide-react",
+        "radix-ui",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@ds/button",
+        "@ds/input",
+        "@ds/separator",
+        "@ds/sheet",
+        "@ds/skeleton",
+        "@ds/tooltip",
+        "@ds/use-mobile",
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/sidebar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
     {
       "name": "example-button",
       "type": "registry:component",
       "title": "Button example",
       "description": "Usage example for the Button component.",
-      "registryDependencies": ["button"],
+      "registryDependencies": [
+        "@ds/button"
+      ],
       "files": [
-        { "path": "registry/new-york/examples/button-demo.tsx", "type": "registry:component" }
+        {
+          "path": "registry/new-york/examples/button-demo.tsx",
+          "type": "registry:component"
+        }
       ]
     },
-    { "name": "example-alert", "type": "registry:component", "title": "Alert example", "registryDependencies": ["alert"], "files": [{ "path": "registry/new-york/examples/alert-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-avatar", "type": "registry:component", "title": "Avatar example", "registryDependencies": ["avatar"], "files": [{ "path": "registry/new-york/examples/avatar-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-badge", "type": "registry:component", "title": "Badge example", "registryDependencies": ["badge"], "files": [{ "path": "registry/new-york/examples/badge-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-card", "type": "registry:component", "title": "Card example", "dependencies": ["lucide-react"], "registryDependencies": ["card"], "files": [{ "path": "registry/new-york/examples/card-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-checkbox", "type": "registry:component", "title": "Checkbox example", "registryDependencies": ["checkbox", "label"], "files": [{ "path": "registry/new-york/examples/checkbox-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-dropdown-menu", "type": "registry:component", "title": "Dropdown Menu example", "registryDependencies": ["dropdown-menu", "button"], "files": [{ "path": "registry/new-york/examples/dropdown-menu-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-empty", "type": "registry:component", "title": "Empty example", "dependencies": ["lucide-react"], "registryDependencies": ["empty"], "files": [{ "path": "registry/new-york/examples/empty-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-label", "type": "registry:component", "title": "Label example", "registryDependencies": ["label"], "files": [{ "path": "registry/new-york/examples/label-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-pagination", "type": "registry:component", "title": "Pagination example", "registryDependencies": ["pagination"], "files": [{ "path": "registry/new-york/examples/pagination-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-popover", "type": "registry:component", "title": "Popover example", "registryDependencies": ["popover", "button"], "files": [{ "path": "registry/new-york/examples/popover-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-progress", "type": "registry:component", "title": "Progress example", "registryDependencies": ["progress"], "files": [{ "path": "registry/new-york/examples/progress-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-radio-group", "type": "registry:component", "title": "Radio Group example", "registryDependencies": ["radio-group", "label"], "files": [{ "path": "registry/new-york/examples/radio-group-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-scroll-area", "type": "registry:component", "title": "Scroll Area example", "registryDependencies": ["scroll-area"], "files": [{ "path": "registry/new-york/examples/scroll-area-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-separator", "type": "registry:component", "title": "Separator example", "registryDependencies": ["separator"], "files": [{ "path": "registry/new-york/examples/separator-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-sheet", "type": "registry:component", "title": "Sheet example", "registryDependencies": ["sheet", "button"], "files": [{ "path": "registry/new-york/examples/sheet-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-skeleton", "type": "registry:component", "title": "Skeleton example", "registryDependencies": ["skeleton"], "files": [{ "path": "registry/new-york/examples/skeleton-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-sonner", "type": "registry:component", "title": "Sonner example", "registryDependencies": ["sonner", "button"], "files": [{ "path": "registry/new-york/examples/sonner-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-switch", "type": "registry:component", "title": "Switch example", "registryDependencies": ["switch", "label"], "files": [{ "path": "registry/new-york/examples/switch-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-toggle-group", "type": "registry:component", "title": "Toggle Group example", "dependencies": ["lucide-react"], "registryDependencies": ["toggle-group"], "files": [{ "path": "registry/new-york/examples/toggle-group-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-tooltip", "type": "registry:component", "title": "Tooltip example", "registryDependencies": ["tooltip", "button"], "files": [{ "path": "registry/new-york/examples/tooltip-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-trash-dashed-border-circle", "type": "registry:component", "title": "Trash Dashed Border Circle example", "registryDependencies": ["trash-dashed-border-circle"], "files": [{ "path": "registry/new-york/examples/trash-dashed-border-circle-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-whatsapp-icon", "type": "registry:component", "title": "WhatsApp Icon example", "registryDependencies": ["whatsapp-icon"], "files": [{ "path": "registry/new-york/examples/whatsapp-icon-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-dialog", "type": "registry:component", "title": "Dialog example", "registryDependencies": ["dialog", "button"], "files": [{ "path": "registry/new-york/examples/dialog-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-field", "type": "registry:component", "title": "Field example", "registryDependencies": ["field", "input"], "files": [{ "path": "registry/new-york/examples/field-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-form-field", "type": "registry:component", "title": "Form Field example", "registryDependencies": ["form-field", "input"], "files": [{ "path": "registry/new-york/examples/form-field-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-switch-field", "type": "registry:component", "title": "Switch Field example", "registryDependencies": ["switch-field"], "files": [{ "path": "registry/new-york/examples/switch-field-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-tab-button", "type": "registry:component", "title": "Tab Button example", "dependencies": ["lucide-react"], "registryDependencies": ["tab-button"], "files": [{ "path": "registry/new-york/examples/tab-button-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-table-pagination", "type": "registry:component", "title": "Table Pagination example", "registryDependencies": ["table-pagination"], "files": [{ "path": "registry/new-york/examples/table-pagination-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-table", "type": "registry:component", "title": "Table example", "registryDependencies": ["table"], "files": [{ "path": "registry/new-york/examples/table-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-command", "type": "registry:component", "title": "Command example", "registryDependencies": ["command"], "files": [{ "path": "registry/new-york/examples/command-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-currency-input", "type": "registry:component", "title": "Currency Input example", "registryDependencies": ["currency-input"], "files": [{ "path": "registry/new-york/examples/currency-input-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-file-upload-compact", "type": "registry:component", "title": "File Upload Compact example", "registryDependencies": ["file-upload-compact"], "files": [{ "path": "registry/new-york/examples/file-upload-compact-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-image-upload-compact", "type": "registry:component", "title": "Image Upload Compact example", "registryDependencies": ["image-upload-compact"], "files": [{ "path": "registry/new-york/examples/image-upload-compact-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-image-upload", "type": "registry:component", "title": "Image Upload example", "registryDependencies": ["image-upload"], "files": [{ "path": "registry/new-york/examples/image-upload-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-input-group", "type": "registry:component", "title": "Input Group example", "dependencies": ["lucide-react"], "registryDependencies": ["input-group"], "files": [{ "path": "registry/new-york/examples/input-group-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-input", "type": "registry:component", "title": "Input example", "dependencies": ["lucide-react"], "registryDependencies": ["input"], "files": [{ "path": "registry/new-york/examples/input-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-select", "type": "registry:component", "title": "Select example", "registryDependencies": ["select"], "files": [{ "path": "registry/new-york/examples/select-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-textarea", "type": "registry:component", "title": "Textarea example", "registryDependencies": ["textarea"], "files": [{ "path": "registry/new-york/examples/textarea-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-combobox", "type": "registry:component", "title": "Combobox example", "registryDependencies": ["combobox"], "files": [{ "path": "registry/new-york/examples/combobox-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-phone-input", "type": "registry:component", "title": "Phone Input example", "registryDependencies": ["phone-input"], "files": [{ "path": "registry/new-york/examples/phone-input-demo.tsx", "type": "registry:component" }] },
-    { "name": "example-sidebar", "type": "registry:component", "title": "Sidebar example", "dependencies": ["lucide-react"], "registryDependencies": ["sidebar"], "files": [{ "path": "registry/new-york/examples/sidebar-demo.tsx", "type": "registry:component" }] }
+    {
+      "name": "example-alert",
+      "type": "registry:component",
+      "title": "Alert example",
+      "registryDependencies": [
+        "@ds/alert"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/alert-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-avatar",
+      "type": "registry:component",
+      "title": "Avatar example",
+      "registryDependencies": [
+        "@ds/avatar"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/avatar-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-badge",
+      "type": "registry:component",
+      "title": "Badge example",
+      "registryDependencies": [
+        "@ds/badge"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/badge-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-card",
+      "type": "registry:component",
+      "title": "Card example",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "@ds/card"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/card-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-checkbox",
+      "type": "registry:component",
+      "title": "Checkbox example",
+      "registryDependencies": [
+        "@ds/checkbox",
+        "@ds/label"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/checkbox-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-dropdown-menu",
+      "type": "registry:component",
+      "title": "Dropdown Menu example",
+      "registryDependencies": [
+        "@ds/dropdown-menu",
+        "@ds/button"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/dropdown-menu-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-empty",
+      "type": "registry:component",
+      "title": "Empty example",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "@ds/empty"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/empty-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-label",
+      "type": "registry:component",
+      "title": "Label example",
+      "registryDependencies": [
+        "@ds/label"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/label-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-pagination",
+      "type": "registry:component",
+      "title": "Pagination example",
+      "registryDependencies": [
+        "@ds/pagination"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/pagination-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-popover",
+      "type": "registry:component",
+      "title": "Popover example",
+      "registryDependencies": [
+        "@ds/popover",
+        "@ds/button"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/popover-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-progress",
+      "type": "registry:component",
+      "title": "Progress example",
+      "registryDependencies": [
+        "@ds/progress"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/progress-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-radio-group",
+      "type": "registry:component",
+      "title": "Radio Group example",
+      "registryDependencies": [
+        "@ds/radio-group",
+        "@ds/label"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/radio-group-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-scroll-area",
+      "type": "registry:component",
+      "title": "Scroll Area example",
+      "registryDependencies": [
+        "@ds/scroll-area"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/scroll-area-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-separator",
+      "type": "registry:component",
+      "title": "Separator example",
+      "registryDependencies": [
+        "@ds/separator"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/separator-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-sheet",
+      "type": "registry:component",
+      "title": "Sheet example",
+      "registryDependencies": [
+        "@ds/sheet",
+        "@ds/button"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/sheet-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-skeleton",
+      "type": "registry:component",
+      "title": "Skeleton example",
+      "registryDependencies": [
+        "@ds/skeleton"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/skeleton-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-sonner",
+      "type": "registry:component",
+      "title": "Sonner example",
+      "registryDependencies": [
+        "@ds/sonner",
+        "@ds/button"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/sonner-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-switch",
+      "type": "registry:component",
+      "title": "Switch example",
+      "registryDependencies": [
+        "@ds/switch",
+        "@ds/label"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/switch-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-toggle-group",
+      "type": "registry:component",
+      "title": "Toggle Group example",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "@ds/toggle-group"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/toggle-group-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-tooltip",
+      "type": "registry:component",
+      "title": "Tooltip example",
+      "registryDependencies": [
+        "@ds/tooltip",
+        "@ds/button"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/tooltip-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-trash-dashed-border-circle",
+      "type": "registry:component",
+      "title": "Trash Dashed Border Circle example",
+      "registryDependencies": [
+        "@ds/trash-dashed-border-circle"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/trash-dashed-border-circle-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-whatsapp-icon",
+      "type": "registry:component",
+      "title": "WhatsApp Icon example",
+      "registryDependencies": [
+        "@ds/whatsapp-icon"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/whatsapp-icon-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-dialog",
+      "type": "registry:component",
+      "title": "Dialog example",
+      "registryDependencies": [
+        "@ds/dialog",
+        "@ds/button"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/dialog-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-field",
+      "type": "registry:component",
+      "title": "Field example",
+      "registryDependencies": [
+        "@ds/field",
+        "@ds/input"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/field-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-form-field",
+      "type": "registry:component",
+      "title": "Form Field example",
+      "registryDependencies": [
+        "@ds/form-field",
+        "@ds/input"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/form-field-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-switch-field",
+      "type": "registry:component",
+      "title": "Switch Field example",
+      "registryDependencies": [
+        "@ds/switch-field"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/switch-field-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-tab-button",
+      "type": "registry:component",
+      "title": "Tab Button example",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "@ds/tab-button"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/tab-button-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-table-pagination",
+      "type": "registry:component",
+      "title": "Table Pagination example",
+      "registryDependencies": [
+        "@ds/table-pagination"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/table-pagination-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-table",
+      "type": "registry:component",
+      "title": "Table example",
+      "registryDependencies": [
+        "@ds/table"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/table-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-command",
+      "type": "registry:component",
+      "title": "Command example",
+      "registryDependencies": [
+        "@ds/command"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/command-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-currency-input",
+      "type": "registry:component",
+      "title": "Currency Input example",
+      "registryDependencies": [
+        "@ds/currency-input"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/currency-input-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-file-upload-compact",
+      "type": "registry:component",
+      "title": "File Upload Compact example",
+      "registryDependencies": [
+        "@ds/file-upload-compact"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/file-upload-compact-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-image-upload-compact",
+      "type": "registry:component",
+      "title": "Image Upload Compact example",
+      "registryDependencies": [
+        "@ds/image-upload-compact"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/image-upload-compact-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-image-upload",
+      "type": "registry:component",
+      "title": "Image Upload example",
+      "registryDependencies": [
+        "@ds/image-upload"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/image-upload-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-input-group",
+      "type": "registry:component",
+      "title": "Input Group example",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "@ds/input-group"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/input-group-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-input",
+      "type": "registry:component",
+      "title": "Input example",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "@ds/input"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/input-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-select",
+      "type": "registry:component",
+      "title": "Select example",
+      "registryDependencies": [
+        "@ds/select"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/select-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-textarea",
+      "type": "registry:component",
+      "title": "Textarea example",
+      "registryDependencies": [
+        "@ds/textarea"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/textarea-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-combobox",
+      "type": "registry:component",
+      "title": "Combobox example",
+      "registryDependencies": [
+        "@ds/combobox"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/combobox-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-phone-input",
+      "type": "registry:component",
+      "title": "Phone Input example",
+      "registryDependencies": [
+        "@ds/phone-input"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/phone-input-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-sidebar",
+      "type": "registry:component",
+      "title": "Sidebar example",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "@ds/sidebar"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/sidebar-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
   ]
 }

@@ -3,7 +3,7 @@
   "name": "example-progress",
   "title": "Progress example",
   "registryDependencies": [
-    "progress"
+    "@ds/progress"
   ],
   "files": [
     {

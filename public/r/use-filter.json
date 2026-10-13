@@ -7,7 +7,7 @@
     "react-router"
   ],
   "registryDependencies": [
-    "scoped-params"
+    "@ds/scoped-params"
   ],
   "files": [
     {

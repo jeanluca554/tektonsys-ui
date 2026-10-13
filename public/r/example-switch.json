@@ -3,8 +3,8 @@
   "name": "example-switch",
   "title": "Switch example",
   "registryDependencies": [
-    "switch",
-    "label"
+    "@ds/switch",
+    "@ds/label"
   ],
   "files": [
     {

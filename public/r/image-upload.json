@@ -6,9 +6,9 @@
     "lucide-react"
   ],
   "registryDependencies": [
-    "button",
-    "form-field",
-    "utils"
+    "@ds/button",
+    "@ds/form-field",
+    "@ds/utils"
   ],
   "files": [
     {

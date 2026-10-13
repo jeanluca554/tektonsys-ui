@@ -6,7 +6,7 @@
     "react-router"
   ],
   "registryDependencies": [
-    "pagination"
+    "@ds/pagination"
   ],
   "files": [
     {

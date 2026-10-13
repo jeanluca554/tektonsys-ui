@@ -3,7 +3,7 @@
   "name": "example-command",
   "title": "Command example",
   "registryDependencies": [
-    "command"
+    "@ds/command"
   ],
   "files": [
     {

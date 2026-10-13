@@ -3,8 +3,8 @@
   "name": "example-sonner",
   "title": "Sonner example",
   "registryDependencies": [
-    "sonner",
-    "button"
+    "@ds/sonner",
+    "@ds/button"
   ],
   "files": [
     {

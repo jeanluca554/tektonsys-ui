@@ -3,8 +3,8 @@
   "name": "textarea",
   "title": "Textarea",
   "registryDependencies": [
-    "form-field",
-    "utils"
+    "@ds/form-field",
+    "@ds/utils"
   ],
   "files": [
     {

@@ -3,7 +3,7 @@
   "name": "example-badge",
   "title": "Badge example",
   "registryDependencies": [
-    "badge"
+    "@ds/badge"
   ],
   "files": [
     {

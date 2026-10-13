@@ -3,7 +3,7 @@
   "name": "example-skeleton",
   "title": "Skeleton example",
   "registryDependencies": [
-    "skeleton"
+    "@ds/skeleton"
   ],
   "files": [
     {

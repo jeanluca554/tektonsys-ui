@@ -3,8 +3,8 @@
   "name": "example-popover",
   "title": "Popover example",
   "registryDependencies": [
-    "popover",
-    "button"
+    "@ds/popover",
+    "@ds/button"
   ],
   "files": [
     {

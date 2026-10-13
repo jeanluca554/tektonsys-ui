@@ -3,7 +3,7 @@
   "name": "example-table-pagination",
   "title": "Table Pagination example",
   "registryDependencies": [
-    "table-pagination"
+    "@ds/table-pagination"
   ],
   "files": [
     {

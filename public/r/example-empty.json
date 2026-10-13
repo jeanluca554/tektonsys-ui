@@ -6,7 +6,7 @@
     "lucide-react"
   ],
   "registryDependencies": [
-    "empty"
+    "@ds/empty"
   ],
   "files": [
     {

@@ -3,7 +3,7 @@
   "name": "example-separator",
   "title": "Separator example",
   "registryDependencies": [
-    "separator"
+    "@ds/separator"
   ],
   "files": [
     {

@@ -3,8 +3,8 @@
   "name": "example-dialog",
   "title": "Dialog example",
   "registryDependencies": [
-    "dialog",
-    "button"
+    "@ds/dialog",
+    "@ds/button"
   ],
   "files": [
     {

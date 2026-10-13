@@ -3,7 +3,7 @@
   "name": "example-scroll-area",
   "title": "Scroll Area example",
   "registryDependencies": [
-    "scroll-area"
+    "@ds/scroll-area"
   ],
   "files": [
     {

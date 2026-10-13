@@ -3,7 +3,7 @@
   "name": "example-avatar",
   "title": "Avatar example",
   "registryDependencies": [
-    "avatar"
+    "@ds/avatar"
   ],
   "files": [
     {

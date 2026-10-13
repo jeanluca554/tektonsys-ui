@@ -3,8 +3,8 @@
   "name": "example-checkbox",
   "title": "Checkbox example",
   "registryDependencies": [
-    "checkbox",
-    "label"
+    "@ds/checkbox",
+    "@ds/label"
   ],
   "files": [
     {

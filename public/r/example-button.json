@@ -4,7 +4,7 @@
   "title": "Button example",
   "description": "Usage example for the Button component.",
   "registryDependencies": [
-    "button"
+    "@ds/button"
   ],
   "files": [
     {

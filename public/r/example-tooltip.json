@@ -3,8 +3,8 @@
   "name": "example-tooltip",
   "title": "Tooltip example",
   "registryDependencies": [
-    "tooltip",
-    "button"
+    "@ds/tooltip",
+    "@ds/button"
   ],
   "files": [
     {

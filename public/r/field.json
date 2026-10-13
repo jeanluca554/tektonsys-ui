@@ -6,9 +6,9 @@
     "tailwind-variants"
   ],
   "registryDependencies": [
-    "label",
-    "separator",
-    "utils"
+    "@ds/label",
+    "@ds/separator",
+    "@ds/utils"
   ],
   "files": [
     {

@@ -3,7 +3,7 @@
   "name": "example-table",
   "title": "Table example",
   "registryDependencies": [
-    "table"
+    "@ds/table"
   ],
   "files": [
     {

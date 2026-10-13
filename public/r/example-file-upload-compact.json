@@ -3,7 +3,7 @@
   "name": "example-file-upload-compact",
   "title": "File Upload Compact example",
   "registryDependencies": [
-    "file-upload-compact"
+    "@ds/file-upload-compact"
   ],
   "files": [
     {

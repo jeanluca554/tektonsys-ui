@@ -3,7 +3,7 @@
   "name": "example-textarea",
   "title": "Textarea example",
   "registryDependencies": [
-    "textarea"
+    "@ds/textarea"
   ],
   "files": [
     {

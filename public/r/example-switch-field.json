@@ -3,7 +3,7 @@
   "name": "example-switch-field",
   "title": "Switch Field example",
   "registryDependencies": [
-    "switch-field"
+    "@ds/switch-field"
   ],
   "files": [
     {

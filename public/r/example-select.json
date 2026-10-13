@@ -3,7 +3,7 @@
   "name": "example-select",
   "title": "Select example",
   "registryDependencies": [
-    "select"
+    "@ds/select"
   ],
   "files": [
     {

@@ -3,8 +3,8 @@
   "name": "input-group",
   "title": "Input Group",
   "registryDependencies": [
-    "form-field",
-    "utils"
+    "@ds/form-field",
+    "@ds/utils"
   ],
   "files": [
     {

@@ -7,12 +7,12 @@
     "react-phone-number-input"
   ],
   "registryDependencies": [
-    "button",
-    "command",
-    "input",
-    "popover",
-    "scroll-area",
-    "utils"
+    "@ds/button",
+    "@ds/command",
+    "@ds/input",
+    "@ds/popover",
+    "@ds/scroll-area",
+    "@ds/utils"
   ],
   "files": [
     {

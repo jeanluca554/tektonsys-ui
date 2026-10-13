@@ -3,8 +3,8 @@
   "name": "example-sheet",
   "title": "Sheet example",
   "registryDependencies": [
-    "sheet",
-    "button"
+    "@ds/sheet",
+    "@ds/button"
   ],
   "files": [
     {

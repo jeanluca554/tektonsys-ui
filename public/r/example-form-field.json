@@ -3,8 +3,8 @@
   "name": "example-form-field",
   "title": "Form Field example",
   "registryDependencies": [
-    "form-field",
-    "input"
+    "@ds/form-field",
+    "@ds/input"
   ],
   "files": [
     {

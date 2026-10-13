@@ -3,7 +3,7 @@
   "name": "example-pagination",
   "title": "Pagination example",
   "registryDependencies": [
-    "pagination"
+    "@ds/pagination"
   ],
   "files": [
     {

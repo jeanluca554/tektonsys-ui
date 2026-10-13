@@ -3,7 +3,7 @@
   "name": "example-combobox",
   "title": "Combobox example",
   "registryDependencies": [
-    "combobox"
+    "@ds/combobox"
   ],
   "files": [
     {
