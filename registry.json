@@ -827,6 +827,26 @@
       ]
     },
     {
+      "name": "sidebar-nav",
+      "type": "registry:ui",
+      "title": "Sidebar Nav",
+      "description": "Renders a themed sidebar navigation list (with optional collapsible sub-items) from a plain sections array — no app-specific logic, just icon/label/path data in.",
+      "dependencies": [
+        "lucide-react",
+        "react-router"
+      ],
+      "registryDependencies": [
+        "@ds/sidebar",
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/sidebar-nav.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "example-button",
       "type": "registry:component",
       "title": "Button example",
