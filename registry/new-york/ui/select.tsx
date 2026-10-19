@@ -51,8 +51,9 @@ function Trigger({
 function Content({
   className,
   children,
-  position = "item-aligned",
+  position = "popper",
   align = "center",
+  sideOffset = 2,
   ...props
 }: ComponentProps<typeof SelectPrimitive.Content>) {
   return (
@@ -67,6 +68,7 @@ function Content({
         )}
         position={position}
         align={align}
+        sideOffset={sideOffset}
         {...props}
       >
         <ScrollUpButton />
