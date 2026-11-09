@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-tabs",
+  "title": "Tabs example",
+  "registryDependencies": [
+    "@ds/tabs"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/examples/tabs-demo.tsx",
+      "content": "import {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"~/client/components/ui/tabs\";\n\nexport default function TabsDemo() {\n  return (\n    <div className=\"flex flex-col gap-8\">\n      <Tabs defaultValue=\"account\" className=\"w-[400px]\">\n        <TabsList>\n          <TabsTrigger value=\"account\">Conta</TabsTrigger>\n          <TabsTrigger value=\"password\">Senha</TabsTrigger>\n        </TabsList>\n        <TabsContent value=\"account\">\n          Altere as informações da sua conta aqui.\n        </TabsContent>\n        <TabsContent value=\"password\">Altere sua senha aqui.</TabsContent>\n      </Tabs>\n\n      <Tabs defaultValue=\"account\" className=\"w-[400px]\">\n        <TabsList variant=\"line\">\n          <TabsTrigger value=\"account\">Conta</TabsTrigger>\n          <TabsTrigger value=\"password\">Senha</TabsTrigger>\n        </TabsList>\n        <TabsContent value=\"account\">\n          Altere as informações da sua conta aqui.\n        </TabsContent>\n        <TabsContent value=\"password\">Altere sua senha aqui.</TabsContent>\n      </Tabs>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

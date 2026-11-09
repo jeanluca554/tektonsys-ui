@@ -517,6 +517,24 @@
       ]
     },
     {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "dependencies": [
+        "radix-ui",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@ds/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/ui/tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "form-field",
       "type": "registry:ui",
       "title": "Form Field",
@@ -1197,6 +1215,20 @@
       "files": [
         {
           "path": "registry/new-york/examples/dialog-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "example-tabs",
+      "type": "registry:component",
+      "title": "Tabs example",
+      "registryDependencies": [
+        "@ds/tabs"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/examples/tabs-demo.tsx",
           "type": "registry:component"
         }
       ]
